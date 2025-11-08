@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+}
+
+.navbar {
+  background: #222;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #00bcd4;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(120deg, #007bff, #00bcd4);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.hero span {
+  color: #ffeb3b;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background: #fff;
+  color: #007bff;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+.about, .services {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.about h2, .services h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+  color: #555;
+}
+
+.service-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9em;
+  margin-top: 50px;
+}
