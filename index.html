@@ -1,55 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MarketZone - Grow Your Business</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MarketZone — Brand Promotion & Hosting</title>
+
+  <!-- Google Font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">MarketZone</div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#">MarketZone</a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <h1>Welcome to <span>MarketZone</span></h1>
-    <p>Your one-stop solution for brand promotion and online growth.</p>
-    <a href="#" class="btn">Get Started</a>
-  </section>
-
-  <section class="about">
-    <h2>About Us</h2>
-    <p>We help businesses reach their full potential with modern digital solutions, powerful hosting, and strategic brand promotion.</p>
-  </section>
-
-  <section class="services">
-    <h2>Our Services</h2>
-    <div class="service-box">
-      <div class="box">
-        <h3>Web Hosting</h3>
-        <p>Fast, secure, and reliable hosting solutions for your business websites.</p>
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Grow your brand — with reliable hosting & expert promotion</h1>
+          <p>MarketZone combines fast hosting, smart marketing, and growth-driven strategy to scale your business online.</p>
+          <div class="hero-cta">
+            <a href="#services" class="btn primary">See Services</a>
+            <a href="#contact" class="btn ghost">Get a Quote</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="card">
+            <h3>Start Now</h3>
+            <p>Free consultation • Custom hosting plans • 24/7 support</p>
+            <div class="card-row">
+              <div><strong>99.9%</strong><small> Uptime</small></div>
+              <div><strong>50ms</strong><small> Avg TTFB</small></div>
+            </div>
+            <a href="#contact" class="btn small">Contact Sales</a>
+          </div>
+        </div>
       </div>
-      <div class="box">
-        <h3>Brand Marketing</h3>
-        <p>Build your brand identity and engage customers with impactful marketing.</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About MarketZone</h2>
+        <p class="lead">We empower brands with performance hosting and focused promotion—so your audience finds you, engages, and becomes customers.</p>
+        <div class="grid-3">
+          <div class="feature">
+            <h3>Managed Hosting</h3>
+            <p>Fast SSD servers, automatic backups and managed security—so your site stays up and safe.</p>
+          </div>
+          <div class="feature">
+            <h3>Brand Campaigns</h3>
+            <p>Social & search campaigns that increase visibility and convert visitors into buyers.</p>
+          </div>
+          <div class="feature">
+            <h3>Expert Support</h3>
+            <p>24/7 technical & marketing support to keep your operations smooth.</p>
+          </div>
+        </div>
       </div>
-      <div class="box">
-        <h3>SEO & Growth</h3>
-        <p>Optimize your presence and grow your online reach with expert SEO strategies.</p>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="grid-3 cards">
+          <article class="service">
+            <h3>Shared & VPS Hosting</h3>
+            <p>Scalable plans for small blogs to enterprise apps. cPanel, automatic SSL, daily backups.</p>
+          </article>
+          <article class="service">
+            <h3>Brand Promotion</h3>
+            <p>Content, social ads, influencer tie-ups, and strategy tailored to your audience.</p>
+          </article>
+          <article class="service">
+            <h3>SEO & Analytics</h3>
+            <p>On-page SEO, technical fixes, and growth analytics to measure success.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING (simple teaser) -->
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <h2>Plans & Pricing</h2>
+        <p class="lead">Simple, transparent pricing — scale as you grow.</p>
+        <div class="grid-3 cards">
+          <div class="plan">
+            <h4>Starter</h4>
+            <p class="price">₹99 <small>/mo</small></p>
+            <ul>
+              <li>1 Website</li>
+              <li>10 GB SSD</li>
+              <li>cPanel & SSL</li>
+            </ul>
+            <a class="btn" href="#contact">Choose</a>
+          </div>
+          <div class="plan featured">
+            <h4>Business</h4>
+            <p class="price">₹399 <small>/mo</small></p>
+            <ul>
+              <li>10 Websites</li>
+              <li>50 GB SSD</li>
+              <li>Priority Support</li>
+            </ul>
+            <a class="btn primary" href="#contact">Choose</a>
+          </div>
+          <div class="plan">
+            <h4>Advanced</h4>
+            <p class="price">Custom</p>
+            <ul>
+              <li>Dedicated resources</li>
+              <li>Enterprise SLA</li>
+              <li>Custom Integrations</li>
+            </ul>
+            <a class="btn" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="container contact-inner">
+        <div class="contact-form">
+          <h2>Contact Us</h2>
+          <p class="lead">Tell us about your project — we'll get back within 24 hours.</p>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+              <input type="email" id="email" name="email" placeholder="Email address" required />
+            </div>
+            <textarea id="message" name="message" rows="5" placeholder="Describe your project" required></textarea>
+            <div class="form-row space">
+              <button type="submit" class="btn primary">Send Message</button>
+              <div id="formMsg" class="form-msg" aria-live="polite"></div>
+            </div>
+          </form>
+        </div>
+
+        <aside class="contact-info">
+          <h3>Get in touch</h3>
+          <p><strong>Email:</strong> hello@marketzone.example</p>
+          <p><strong>Phone:</strong> +91 98765 43210</p>
+          <div class="small">Or visit us at your convenience — we offer demos & free audits.</div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <div>© <span id="year"></span> MarketZone. All rights reserved.</div>
+        <div class="social">
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
       </div>
     </div>
-  </section>
-
-  <footer>
-    <p>© 2025 MarketZone. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
