@@ -1,3 +1,3 @@
-function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-}
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("MarketZone Website Loaded!");
+});
