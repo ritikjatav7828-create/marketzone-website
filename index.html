@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MarketZone — Brand Promotion & Hosting</title>
 
-  <!-- Google Font (optional) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- NAVBAR -->
+  <!-- NAV -->
   <header class="nav">
     <div class="container nav-inner">
       <a class="logo" href="#">MarketZone</a>
@@ -37,44 +35,56 @@
     <section id="home" class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <h1>Grow your brand — with reliable hosting & expert promotion</h1>
-          <p>MarketZone combines fast hosting, smart marketing, and growth-driven strategy to scale your business online.</p>
-          <div class="hero-cta">
+          <h1 class="reveal-up">Grow your brand with <span class="accent">MarketZone</span></h1>
+          <p class="lead reveal-up delay-1">Multicolor campaigns, fast hosting & growth-first strategies — everything in one place to make your brand shine.</p>
+          <div class="hero-cta reveal-up delay-2">
             <a href="#services" class="btn primary">See Services</a>
             <a href="#contact" class="btn ghost">Get a Quote</a>
           </div>
         </div>
-        <div class="hero-card">
-          <div class="card">
-            <h3>Start Now</h3>
+
+        <div class="hero-visual reveal-right delay-1">
+          <div class="glass-card">
+            <h3>Get started</h3>
             <p>Free consultation • Custom hosting plans • 24/7 support</p>
             <div class="card-row">
               <div><strong>99.9%</strong><small> Uptime</small></div>
               <div><strong>50ms</strong><small> Avg TTFB</small></div>
             </div>
-            <a href="#contact" class="btn small">Contact Sales</a>
+            <a href="#contact" class="btn small primary">Contact Sales</a>
+          </div>
+
+          <div class="floating-badges">
+            <div class="badge b1">SEO</div>
+            <div class="badge b2">Hosting</div>
+            <div class="badge b3">Ads</div>
           </div>
         </div>
       </div>
+      <!-- decorative shapes -->
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="about">
       <div class="container">
-        <h2>About MarketZone</h2>
-        <p class="lead">We empower brands with performance hosting and focused promotion—so your audience finds you, engages, and becomes customers.</p>
-        <div class="grid-3">
+        <h2 class="reveal-up">About MarketZone</h2>
+        <p class="lead reveal-up delay-1">We combine performance hosting with targeted brand promotion to increase visibility, traffic and conversions for businesses of every size.</p>
+
+        <div class="grid-3 reveal-up delay-2">
           <div class="feature">
             <h3>Managed Hosting</h3>
-            <p>Fast SSD servers, automatic backups and managed security—so your site stays up and safe.</p>
+            <p>Fast SSD servers, automatic backups and managed security — your sites stay online and secure.</p>
           </div>
           <div class="feature">
             <h3>Brand Campaigns</h3>
-            <p>Social & search campaigns that increase visibility and convert visitors into buyers.</p>
+            <p>Creative content and paid social/search strategies to put your brand in front of the right audience.</p>
           </div>
           <div class="feature">
-            <h3>Expert Support</h3>
-            <p>24/7 technical & marketing support to keep your operations smooth.</p>
+            <h3>Analytics</h3>
+            <p>Data-driven insights to measure growth and optimize campaigns continually.</p>
           </div>
         </div>
       </div>
@@ -83,30 +93,30 @@
     <!-- SERVICES -->
     <section id="services" class="services">
       <div class="container">
-        <h2>Our Services</h2>
+        <h2 class="reveal-up">Our Services</h2>
         <div class="grid-3 cards">
-          <article class="service">
+          <article class="service reveal-up delay-1">
             <h3>Shared & VPS Hosting</h3>
             <p>Scalable plans for small blogs to enterprise apps. cPanel, automatic SSL, daily backups.</p>
           </article>
-          <article class="service">
+          <article class="service reveal-up delay-2">
             <h3>Brand Promotion</h3>
-            <p>Content, social ads, influencer tie-ups, and strategy tailored to your audience.</p>
+            <p>Social & search ads, influencer tie-ups, and content strategy tailored to your market.</p>
           </article>
-          <article class="service">
-            <h3>SEO & Analytics</h3>
-            <p>On-page SEO, technical fixes, and growth analytics to measure success.</p>
+          <article class="service reveal-up delay-3">
+            <h3>SEO & Growth</h3>
+            <p>Technical SEO, content optimization and analytics to improve visibility and conversions.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- PRICING (simple teaser) -->
+    <!-- PRICING -->
     <section id="pricing" class="pricing">
       <div class="container">
-        <h2>Plans & Pricing</h2>
-        <p class="lead">Simple, transparent pricing — scale as you grow.</p>
-        <div class="grid-3 cards">
+        <h2 class="reveal-up">Plans & Pricing (teaser)</h2>
+        <p class="lead reveal-up delay-1">Start small, scale as you grow — transparent pricing built for results.</p>
+        <div class="grid-3 cards reveal-up delay-2">
           <div class="plan">
             <h4>Starter</h4>
             <p class="price">₹99 <small>/mo</small></p>
@@ -144,9 +154,9 @@
     <!-- CONTACT -->
     <section id="contact" class="contact">
       <div class="container contact-inner">
-        <div class="contact-form">
+        <div class="contact-form reveal-up">
           <h2>Contact Us</h2>
-          <p class="lead">Tell us about your project — we'll get back within 24 hours.</p>
+          <p class="lead">Tell us about your project — we'll reply within 24 hours.</p>
           <form id="contactForm" novalidate>
             <div class="form-row">
               <input type="text" id="name" name="name" placeholder="Your name" required />
@@ -160,11 +170,11 @@
           </form>
         </div>
 
-        <aside class="contact-info">
+        <aside class="contact-info reveal-up delay-1">
           <h3>Get in touch</h3>
           <p><strong>Email:</strong> hello@marketzone.example</p>
-          <p><strong>Phone:</strong> +91 98765 43210</p>
-          <div class="small">Or visit us at your convenience — we offer demos & free audits.</div>
+          <p><strong>Phone:</strong> <a href="tel:+918305921216">+91 8305921216</a></p>
+          <div class="small">Or visit us for a demo — we offer free audits and custom quotes.</div>
         </aside>
       </div>
     </section>
@@ -178,6 +188,7 @@
         <div class="social">
           <a href="#" aria-label="Twitter">Twitter</a>
           <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <span class="phone">📞 <a href="tel:+918305921216">+91 8305921216</a></span>
         </div>
       </div>
     </div>
