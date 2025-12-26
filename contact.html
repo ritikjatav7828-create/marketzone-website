@@ -1,37 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - MarketZone</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A TO Z Classes | Abhi Sir - Karera's No. 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Hind:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #6366f1; --accent: #a855f7; --dark: #020617; }
+        body { font-family: 'Plus Jakarta Sans', 'Hind', sans-serif; background-color: var(--dark); color: white; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(135deg, #818cf8, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px -20px var(--primary); }
+        .animate-glow { animation: glow 3s ease-in-out infinite; }
+        @keyframes glow { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #312e81; border-radius: 10px; }
+    </style>
 </head>
-<body>
-  <header>
-    <h1 class="logo">MarketZone</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
+<body class="selection:bg-indigo-500/30 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-[1000] px-6 py-4">
+        <div class="max-w-7xl mx-auto glass rounded-3xl px-8 py-4 flex justify-between items-center shadow-2xl">
+            <div class="flex items-center gap-4">
+                <div class="bg-indigo-600 w-12 h-12 rounded-2xl flex items-center justify-center font-bold italic text-2xl shadow-lg">A2Z</div>
+                <div class="hidden sm:block">
+                    <h1 class="text-xl font-bold tracking-tighter uppercase leading-none">A TO Z CLASSES</h1>
+                    <p class="text-[9px] text-indigo-400 font-bold tracking-[0.3em] uppercase italic">Karera Centre</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#admission" class="bg-white text-black px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-indigo-600 hover:text-white transition-all uppercase italic">Apply Now</a>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <section class="content">
-    <h2>Contact Us 📞</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p>📱 Call: 8305921216</p>
-  </section>
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-32 pb-20 px-6 relative overflow-hidden">
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-indigo-600/10 blur-[120px] rounded-full"></div>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-indigo-500/30 text-indigo-400 text-[10px] font-bold uppercase tracking-widest italic">
+                    <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+                    Registration Open for 2025-26
+                </div>
+                <h2 class="text-6xl md:text-8xl font-extrabold italic leading-[0.9] tracking-tighter">
+                    THINK BEYOND <br> <span class="gradient-text italic">LIMITS.</span>
+                </h2>
+                <p class="text-slate-400 text-xl max-w-lg leading-relaxed italic">
+                    करैरा के छात्रों के लिए सफलता का नया मार्ग। <span class="text-white">अभि सर</span> के सानिध्य में पाएं बेहतरीन शिक्षा।
+                </p>
+                <div class="flex flex-wrap gap-6 pt-4">
+                    <a href="https://wa.me/919669735935" class="px-10 py-5 bg-indigo-600 rounded-2xl font-bold text-lg shadow-xl shadow-indigo-600/20 hover:scale-105 transition-transform italic">Start Your Journey</a>
+                    <a href="tel:9669735935" class="px-10 py-5 glass rounded-2xl font-bold text-lg flex items-center gap-3 italic">Call Now</a>
+                </div>
+            </div>
+            <div class="relative group">
+                <img src="poster.png" onerror="this.src='https://via.placeholder.com/600x800/030712/ffffff?text=A2Z+COACHING+POSTER'" class="rounded-[3.5rem] shadow-2xl border border-white/10 w-full transition-all duration-700 group-hover:scale-[1.02]">
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>© 2025 MarketZone | All Rights Reserved</p>
-  </footer>
+    <!-- Subjects Icons Section -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="glass p-8 rounded-[2.5rem] text-center card-hover transition-all">
+                <i class="fas fa-atom text-4xl text-blue-400 mb-4 block animate-spin-slow"></i>
+                <h4 class="font-bold uppercase italic tracking-widest text-sm">Physics</h4>
+            </div>
+            <div class="glass p-8 rounded-[2.5rem] text-center card-hover transition-all">
+                <i class="fas fa-flask text-4xl text-purple-400 mb-4 block"></i>
+                <h4 class="font-bold uppercase italic tracking-widest text-sm">Chemistry</h4>
+            </div>
+            <div class="glass p-8 rounded-[2.5rem] text-center card-hover transition-all">
+                <i class="fas fa-square-root-variable text-4xl text-indigo-400 mb-4 block"></i>
+                <h4 class="font-bold uppercase italic tracking-widest text-sm">Mathematics</h4>
+            </div>
+            <div class="glass p-8 rounded-[2.5rem] text-center card-hover transition-all">
+                <i class="fas fa-dna text-4xl text-pink-400 mb-4 block"></i>
+                <h4 class="font-bold uppercase italic tracking-widest text-sm">Biology</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Reviews Section -->
+    <section class="py-24 px-6 bg-white/[0.01]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-6xl font-black italic uppercase tracking-tighter mb-4">What Our <span class="gradient-text">Stars Say</span></h3>
+                <p class="text-slate-500 font-bold uppercase tracking-widest text-xs italic">सफलता की गूंज, छात्रों की जुबानी</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-10 rounded-[3rem] space-y-6">
+                    <div class="flex gap-1 text-yellow-500"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="italic text-slate-300">"अभि सर के पढ़ाने का तरीका सबसे अलग है। कठिन से कठिन टॉपिक्स भी आसानी से समझ आ जाते हैं।"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-slate-800"></div>
+                        <div><p class="font-bold italic">Rahul Sharma</p><p class="text-[10px] uppercase text-indigo-400">Class 12th • 95%</p></div>
+                    </div>
+                </div>
+                <div class="glass p-10 rounded-[3rem] space-y-6 border-indigo-500/30">
+                    <div class="flex gap-1 text-yellow-500"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="italic text-slate-300">"यहाँ के नोट्स और टेस्ट सीरीज ने मुझे बोर्ड एग्जाम्स में टॉप करने में बहुत मदद की। बेस्ट कोचिंग!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-slate-800"></div>
+                        <div><p class="font-bold italic">Anjali Jatav</p><p class="text-[10px] uppercase text-indigo-400">Class 10th • 98%</p></div>
+                    </div>
+                </div>
+                <div class="glass p-10 rounded-[3rem] space-y-6">
+                    <div class="flex gap-1 text-yellow-500"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="italic text-slate-300">"A TO Z Classes मतलब करैरा की सबसे भरोसेमंद जगह। डाउट क्लियरिंग सेशन्स बेहतरीन हैं।"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-slate-800"></div>
+                        <div><p class="font-bold italic">Vikash Pal</p><p class="text-[10px] uppercase text-indigo-400">Class 12th • 92%</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Form Section -->
+    <section id="admission" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto glass rounded-[4rem] p-10 md:p-20 relative overflow-hidden">
+            <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-indigo-600/10 blur-[80px] rounded-full"></div>
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-5xl font-black italic uppercase mb-4">Book Your <span class="gradient-text">Demo Class</span></h3>
+                <p class="text-slate-400 italic">अपना स्लॉट आज ही सुरक्षित करें!</p>
+            </div>
+            <form class="space-y-6 relative z-10" onsubmit="event.preventDefault(); window.location.href='https://wa.me/919669735935?text=Hi Abhi Sir, I want to join A2Z Classes. Name: ' + document.getElementById('name').value">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <input type="text" id="name" placeholder="आपका नाम (Full Name)" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-indigo-500 transition-all font-bold italic" required>
+                    <input type="text" placeholder="कक्षा (Class)" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-indigo-500 transition-all font-bold italic" required>
+                </div>
+                <input type="tel" placeholder="मोबाइल नंबर (Mobile Number)" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-indigo-500 transition-all font-bold italic" required>
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-5 rounded-2xl font-black text-lg uppercase shadow-xl transition-all hover:scale-[1.01] italic">
+                    Submit & Send Message <i class="fab fa-whatsapp ml-2"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
+            <div class="glass p-12 rounded-[3.5rem] flex flex-col justify-center items-center text-center space-y-6">
+                <div class="w-20 h-20 bg-indigo-600/20 rounded-3xl flex items-center justify-center text-3xl text-indigo-500">
+                    <i class="fas fa-phone-volume animate-bounce"></i>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-black italic uppercase">Contact Us</h4>
+                    <p class="text-slate-400 italic mb-4">अभि सर से सीधे संपर्क करें</p>
+                    <a href="tel:9669735935" class="text-3xl font-black gradient-text">9669735935</a>
+                </div>
+            </div>
+            <div class="glass p-12 rounded-[3.5rem] flex flex-col justify-center items-center text-center space-y-6">
+                <div class="w-20 h-20 bg-purple-600/20 rounded-3xl flex items-center justify-center text-3xl text-purple-500">
+                    <i class="fas fa-location-dot"></i>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-black italic uppercase">Location</h4>
+                    <p class="text-slate-400 italic mb-4">कोचिंग का पता</p>
+                    <p class="text-lg font-bold italic leading-tight uppercase">Tahsil Road, Opposite Honda Showroom, <br> Karera (M.P.)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 border-t border-white/5 text-center">
+        <div class="max-w-7xl mx-auto space-y-10">
+            <div class="flex items-center justify-center gap-4">
+                <div class="bg-indigo-600 w-12 h-12 rounded-2xl flex items-center justify-center font-black italic text-2xl shadow-xl">A2Z</div>
+                <span class="text-2xl font-black uppercase italic tracking-tighter">A TO Z Classes</span>
+            </div>
+            <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-600 font-bold uppercase tracking-[0.5em] text-[10px] italic">Directed by Abhi Sir | Karera</p>
+                <p class="text-slate-600 font-bold uppercase tracking-[0.5em] text-[10px] italic">Created by Ritik Jatav</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact -->
+    <div class="fixed bottom-8 right-8 z-[1000] flex flex-col gap-4">
+        <a href="tel:9669735935" class="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center text-2xl text-white shadow-2xl hover:scale-110 transition-transform">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/919669735935" class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-2xl text-white shadow-2xl hover:scale-110 transition-transform">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
 </body>
 </html>
