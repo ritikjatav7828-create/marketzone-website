@@ -3,174 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A2Z Coaching | Karera's Educational Leader</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>A2Z Coaching Karera | Director: Abhi Sir</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --primary: #002347; 
-            --gold: #ffcc00;    
-            --white: #ffffff;
+            --primary-blue: #002e5b;
+            --gold-accent: #d4af37;
+            --light-bg: #f4f7fa;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         
-        /* --- Yeh raha wo Colorful Educational Background --- */
         body { 
-            background: linear-gradient(rgba(0, 35, 71, 0.9), rgba(0, 35, 71, 0.9)), 
-                        url('https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=1500&q=80'); /* Books & Laptop background */
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            color: white;
+            background-color: var(--light-bg);
+            /* Professional grid background for educational feel */
+            background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+            color: #333;
         }
 
+        /* --- Header --- */
         header {
-            background: var(--primary);
+            background: var(--primary-blue);
             padding: 15px 8%;
             display: flex; justify-content: space-between; align-items: center;
-            border-bottom: 4px solid var(--gold);
+            border-bottom: 4px solid var(--gold-accent);
             position: sticky; top: 0; z-index: 1000;
         }
-        .logo { font-size: 1.8rem; font-weight: 900; color: var(--gold); text-decoration: none; }
+        .logo { font-size: 1.8rem; font-weight: 800; color: var(--gold-accent); text-decoration: none; }
+        .logo span { color: white; }
 
         /* --- Hero Section --- */
         .hero {
-            padding: 100px 8%;
-            text-align: center;
+            padding: 80px 8%;
+            background: linear-gradient(rgba(0, 46, 91, 0.9), rgba(0, 46, 91, 0.9)), 
+                        url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover; background-position: center;
+            color: white; text-align: center; border-radius: 0 0 50px 50px;
         }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
-        .hero span { color: var(--gold); }
-        .hero p { font-size: 1.3rem; margin-bottom: 30px; opacity: 0.9; }
+        .hero h1 { font-size: 3rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.2rem; color: #ddd; margin-bottom: 30px; }
 
-        /* --- Quotes Section --- */
-        .quote-section {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            padding: 40px;
-            margin: 20px 8%;
-            border-radius: 20px;
-            border-left: 10px solid var(--gold);
-            text-align: center;
+        /* --- Director Section (Abhi Sir) --- */
+        .director-section {
+            padding: 80px 8%;
+            display: flex; align-items: center; gap: 50px;
+            flex-wrap: wrap; background: white; margin: 40px 0;
+            border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
-        .quote-section h2 { font-style: italic; font-size: 1.5rem; }
+        .director-img {
+            flex: 1; min-width: 300px; text-align: center;
+        }
+        .director-img img {
+            width: 100%; max-width: 350px;
+            border-radius: 20px;
+            border: 8px solid var(--light-bg);
+            box-shadow: 15px 15px 0 var(--gold-accent);
+        }
+        .director-info { flex: 2; min-width: 300px; }
+        .director-info h2 { color: var(--primary-blue); font-size: 2.5rem; margin-bottom: 10px; }
+        .director-info h4 { color: var(--gold-accent); font-weight: 700; margin-bottom: 20px; text-transform: uppercase; }
+        .director-info p { line-height: 1.8; color: #555; font-size: 1.1rem; margin-bottom: 20px; }
 
         /* --- Subject Cards --- */
-        .subjects { padding: 60px 8%; }
+        .subjects { padding: 40px 8%; }
         .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;
         }
         .card {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            text-align: center;
-            transition: 0.3s;
+            background: white; padding: 40px 20px; border-radius: 20px; text-align: center;
+            border-bottom: 5px solid var(--gold-accent); transition: 0.3s;
         }
-        .card:hover { 
-            background: var(--gold); 
-            color: var(--primary); 
-            transform: translateY(-10px);
-        }
-        .card i { font-size: 3.5rem; margin-bottom: 20px; display: block; }
-        /* Laptop/Book icons inside cards */
-        .card .icon-sub { color: var(--gold); }
-        .card:hover .icon-sub { color: var(--primary); }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .card i { font-size: 3rem; color: var(--primary-blue); margin-bottom: 20px; }
 
-        .btn-notes {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 30px;
-            background: var(--gold);
-            color: var(--primary);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 800;
-            transition: 0.3s;
+        /* --- Buttons --- */
+        .btn {
+            background: var(--primary-blue); color: var(--gold-accent);
+            padding: 12px 30px; border-radius: 10px; text-decoration: none;
+            font-weight: 700; display: inline-block; transition: 0.3s;
         }
-        .card:hover .btn-notes { background: var(--primary); color: white; }
+        .btn:hover { background: var(--gold-accent); color: var(--primary-blue); }
 
-        .admission-btn {
-            background: #25d366; /* WhatsApp Green */
-            color: white;
-            padding: 20px 50px;
-            font-size: 1.2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 900;
-            display: inline-block;
-            margin-top: 40px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        .cta-whatsapp {
+            position: fixed; bottom: 30px; right: 30px;
+            background: #25d366; color: white; padding: 15px 25px;
+            border-radius: 50px; text-decoration: none; font-weight: 700;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 1000;
         }
 
-        footer { background: rgba(0,0,0,0.5); padding: 30px; text-align: center; margin-top: 50px; }
+        footer { background: #111; color: #777; padding: 40px; text-align: center; }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
+            .director-section { text-align: center; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="#" class="logo">A2Z <span style="color: white;">COACHING</span></a>
-        <div style="font-weight: 700; color: var(--gold);"><i class="fas fa-laptop"></i> Digital Campus</div>
+        <a href="#" class="logo">A2Z <span>COACHING</span></a>
+        <div style="color: white; font-weight: 600;"><i class="fas fa-laptop"></i> Smart Learning</div>
     </header>
 
     <section class="hero">
-        <h1>Siksha Jo <span>Zindagi</span> Badal De</h1>
-        <p>Karera ka sabse vishwasniya Agriculture, Biology aur Maths Coaching sansthan.</p>
-        <div style="font-size: 3rem; color: var(--gold);">
-            <i class="fas fa-book-open"></i> <i class="fas fa-laptop-code"></i> <i class="fas fa-graduation-cap"></i>
+        <h1>Ab Sapne Honge <span>Sakar</span></h1>
+        <p>Agriculture, Biology aur Mathematics ka No. 1 Sansthan - Karera</p>
+        <div style="font-size: 2.5rem; color: var(--gold-accent); display: flex; justify-content: center; gap: 20px;">
+            <i class="fas fa-book"></i> <i class="fas fa-laptop-code"></i> <i class="fas fa-user-graduate"></i>
         </div>
     </section>
 
-    <div class="quote-section">
-        <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--gold); margin-bottom: 10px;"></i>
-        <h2>"Mehnat itni khamoshi se karo ki kamyabi shor macha de."</h2>
-        <p style="margin-top: 10px; font-weight: 700;">- Abhi Sir's Motivation</p>
-    </div>
+    <section class="director-section">
+        <div class="director-img">
+            <img src="https://images.unsplash.com/photo-1544717297-fa154da09f9d?auto=format&fit=crop&w=400&q=80" alt="Director Abhi Sir">
+        </div>
+        <div class="director-info">
+            <h4>Director's Message</h4>
+            <h2>Abhi Sir</h2>
+            <p>
+                "Shiksha sirf marks lana nahi, balki bhavishya ke liye taiyar hona hai. 
+                Pichle 3 saalon se hamara ek hi maqsad hai - Karera ke har student ko 
+                Agriculture, Biology aur Maths mein itna mazboot banana ki wo competitive exams 
+                mein sabse aage rahein."
+            </p>
+            <p style="font-style: italic; font-weight: 600;">
+                "Hamare yahan bacho ko concepts ratwaye nahi, balki samjhaye jaate hain."
+            </p>
+            <a href="tel:+91XXXXXXXXXX" class="btn">Talk to Abhi Sir</a>
+        </div>
+    </section>
 
     <section class="subjects">
+        <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.2rem; color: var(--primary-blue);">Hamare Special Courses</h2>
         <div class="grid">
             <div class="card">
-                <i class="fas fa-seedling icon-sub"></i>
+                <i class="fas fa-seedling"></i>
                 <h3>Agriculture</h3>
-                <p>PAT & MP-PAT Special Training with Digital Notes.</p>
-                <a href="#" class="btn-notes">View Notes</a>
+                <p style="margin-bottom: 20px;">PAT & MP-PAT Specialization with Digital Notes.</p>
+                <a href="#" class="btn">Syllabus & Notes</a>
             </div>
-
             <div class="card">
-                <i class="fas fa-microscope icon-sub"></i>
+                <i class="fas fa-dna"></i>
                 <h3>Biology</h3>
-                <p>Complete NCERT solutions for Class 9th-12th.</p>
-                <a href="#" class="btn-notes">View Notes</a>
+                <p style="margin-bottom: 20px;">Class 9th-12th Concept Mastery with Diagrams.</p>
+                <a href="#" class="btn">Syllabus & Notes</a>
             </div>
-
             <div class="card">
-                <i class="fas fa-calculator icon-sub"></i>
+                <i class="fas fa-calculator"></i>
                 <h3>Mathematics</h3>
-                <p>Formula tricks aur advanced practice sets.</p>
-                <a href="#" class="btn-notes">View Notes</a>
+                <p style="margin-bottom: 20px;">Higher Secondary Maths with Practice Sets.</p>
+                <a href="#" class="btn">Syllabus & Notes</a>
             </div>
         </div>
     </section>
 
-    <div style="text-align: center; padding-bottom: 80px;">
-        <h2 style="font-size: 2rem;">3 Saalon Ka Shandar Vishwas!</h2>
-        <a href="https://wa.me/91XXXXXXXXXX" class="admission-btn">
-            <i class="fab fa-whatsapp"></i> ADMISSION OPEN: CALL NOW
-        </a>
-    </div>
+    <section style="text-align: center; padding: 80px 8%; background: var(--primary-blue); color: white;">
+        <h2>Join Karera's Educational Revolution</h2>
+        <p style="margin: 20px 0 35px; opacity: 0.8;">New Batches starting from 1st April. Limited Seats Available!</p>
+        <a href="https://wa.me/91XXXXXXXXXX" class="btn" style="background: var(--gold-accent); color: var(--primary-blue); padding: 15px 40px; font-size: 1.1rem;">Register for Free Demo Class</a>
+    </section>
+
+    <a href="https://wa.me/91XXXXXXXXXX" class="cta-whatsapp"><i class="fab fa-whatsapp"></i> Chat with Us</a>
 
     <footer>
-        <p>&copy; 2025 A2Z Coaching Center Karera | Karera's Pride</p>
-        <p style="font-size: 0.8rem; margin-top: 5px; color: var(--gold);">Created by Ritik</p>
+        <p>&copy; 2025 A2Z Coaching Center Karera | Karera, MP</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; color: var(--gold-accent);">Managed & Developed by Ritik</p>
     </footer>
 
 </body>
