@@ -6,104 +6,128 @@
     <title>A2Z Coaching | Karera | Abhi Sir</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
-        .hero-gradient { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-mesh {
+            background-color: #0f172a;
+            background-image: radial-gradient(at 40% 20%, hsla(28,100%,74%,0.15) 0, transparent 50%), 
+                              radial-gradient(at 80% 0%, hsla(189,100%,56%,0.1) 0, transparent 50%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
-<body class="bg-slate-50">
+<body class="bg-[#0f172a] text-slate-200">
 
-    <nav class="sticky top-0 z-50 glass shadow-md border-b-2 border-yellow-500 p-4">
+    <nav class="fixed w-full z-50 glass-card px-6 py-4">
         <div class="container mx-auto flex justify-between items-center">
-            <div>
-                <h1 class="text-2xl font-black text-slate-900 tracking-tighter italic">A2Z <span class="text-yellow-600">COACHING</span></h1>
-                <p class="text-[10px] font-bold uppercase tracking-[3px] text-gray-500">Sanchalak: Abhi Sir</p>
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-yellow-500 rounded-lg flex items-center justify-center font-black text-slate-900 text-xl shadow-[0_0_20px_rgba(234,179,8,0.3)]">A2Z</div>
+                <span class="text-xl font-extrabold tracking-tighter uppercase">Coaching</span>
             </div>
-            <a href="tel:9669735935" class="bg-slate-900 text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-yellow-500 hover:text-slate-900 transition">Call Now</a>
+            <div class="hidden md:flex gap-8 text-sm font-semibold uppercase tracking-widest">
+                <a href="#home" class="hover:text-yellow-500 transition">Home</a>
+                <a href="#courses" class="hover:text-yellow-400 transition">Courses</a>
+                <a href="#notes" class="hover:text-yellow-400 transition">Study Material</a>
+            </div>
+            <a href="tel:9669735935" class="bg-yellow-500 text-slate-900 px-6 py-2 rounded-full font-bold text-sm hover:scale-105 transition active:scale-95 shadow-lg">Enquiry Now</a>
         </div>
     </nav>
 
-    <header class="hero-gradient text-white py-20 px-4 relative overflow-hidden text-center">
-        <div class="container mx-auto relative z-10">
-            <span class="bg-yellow-500 text-slate-900 px-4 py-1 rounded-full text-sm font-bold mb-4 inline-block">Admission Open 2025-26</span>
-            <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Karera Ki Sabse <span class="text-yellow-400 font-serif">Trustworthy</span> Coaching</h2>
-            <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto italic">Class 9th to 12th (All Subjects) | Agriculture | Arts | Maths & Bio</p>
-            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold">
-                <a href="#notes" class="bg-white text-slate-900 px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition">📑 DOWNLOAD NOTES</a>
-                <a href="https://wa.me/919669735935" class="bg-green-500 text-white px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition"><i class="fab fa-whatsapp mr-2"></i>WHATSAPP</a>
+    <header id="home" class="hero-mesh pt-40 pb-24 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-none">
+                Elevate Your Learning with <br><span class="gradient-text uppercase">Abhi Sir</span>
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Karera's premier institute for <span class="text-white font-medium italic underline decoration-yellow-500">9th to 12th</span> excellence. Specialized tracks for Agriculture, Arts, and Science.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#notes" class="bg-white/10 hover:bg-white/20 px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 border border-white/10 transition">
+                    <i class="fas fa-file-pdf text-yellow-500"></i> Download Notes
+                </a>
+                <a href="https://wa.me/919669735935" class="bg-green-600 hover:bg-green-500 px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 shadow-xl transition">
+                    <i class="fab fa-whatsapp"></i> Join WhatsApp Community
+                </a>
             </div>
         </div>
     </header>
 
-    <section id="notes" class="py-20 container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h3 class="text-3xl font-black text-slate-900 mb-2 underline decoration-yellow-500 underline-offset-8">Study Material Portal</h3>
-            <p class="text-gray-500 font-medium">Bina kisi fees ke premium notes download karein</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl hover:border-blue-500 transition-all group">
-                <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-500 transition">
-                    <i class="fas fa-square-root-variable text-2xl text-blue-600 group-hover:text-white"></i>
+    <section id="courses" class="py-24 container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-[2rem] hover:border-yellow-500/50 transition duration-500 group">
+                <div class="w-14 h-14 bg-yellow-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-500 transition duration-500">
+                    <i class="fas fa-atom text-2xl text-yellow-500 group-hover:text-slate-900"></i>
                 </div>
-                <h4 class="text-xl font-bold mb-2">Maths Notes</h4>
-                <p class="text-gray-500 text-sm mb-6 font-medium">Class 9th-12th Formula sheets & Imp questions.</p>
-                <a href="LINK_DAALE" class="text-blue-600 font-black border-b-2 border-blue-600 pb-1 hover:text-blue-800 transition">GET PDF →</a>
+                <h3 class="text-2xl font-bold mb-4 italic">Science Stream</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">Master Physics, Chemistry, and Biology with concept-driven classes and NCERT excellence.</p>
+                <div class="flex gap-2">
+                    <span class="text-[10px] bg-white/5 px-2 py-1 rounded">Class 11-12</span>
+                    <span class="text-[10px] bg-white/5 px-2 py-1 rounded">Maths/Bio</span>
+                </div>
             </div>
 
-            <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl hover:border-green-500 transition-all group">
-                <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition">
-                    <i class="fas fa-wheat-awn text-2xl text-green-600 group-hover:text-white"></i>
+            <div class="glass-card p-8 rounded-[2rem] hover:border-green-500/50 transition duration-500 group">
+                <div class="w-14 h-14 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition duration-500">
+                    <i class="fas fa-leaf text-2xl text-green-500 group-hover:text-slate-900"></i>
                 </div>
-                <h4 class="text-xl font-bold mb-2">Agriculture</h4>
-                <p class="text-gray-500 text-sm mb-6 font-medium">Complete crop production & animal husbandry notes.</p>
-                <a href="LINK_DAALE" class="text-green-600 font-black border-b-2 border-green-600 pb-1 hover:text-green-800 transition">GET PDF →</a>
+                <h3 class="text-2xl font-bold mb-4 italic">Agriculture</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">Specialized coaching for Karera's future agronomists. Deep dive into crop production.</p>
+                <div class="flex gap-2">
+                    <span class="text-[10px] bg-white/5 px-2 py-1 rounded">Class 11-12</span>
+                    <span class="text-[10px] bg-white/5 px-2 py-1 rounded">Agri Science</span>
+                </div>
             </div>
 
-            <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl hover:border-purple-500 transition-all group">
-                <div class="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500 transition">
-                    <i class="fas fa-palette text-2xl text-purple-600 group-hover:text-white"></i>
+            <div class="glass-card p-8 rounded-[2rem] hover:border-purple-500/50 transition duration-500 group">
+                <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500 transition duration-500">
+                    <i class="fas fa-university text-2xl text-purple-500 group-hover:text-slate-900"></i>
                 </div>
-                <h4 class="text-xl font-bold mb-2">Arts Stream</h4>
-                <p class="text-gray-500 text-sm mb-6 font-medium">History, Political Science & Geography special.</p>
-                <a href="LINK_DAALE" class="text-purple-600 font-black border-b-2 border-purple-600 pb-1 hover:text-purple-800 transition">GET PDF →</a>
-            </div>
-
-            <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl hover:border-red-500 transition-all group">
-                <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-500 transition">
-                    <i class="fas fa-dna text-2xl text-red-600 group-hover:text-white"></i>
-                </div>
-                <h4 class="text-xl font-bold mb-2">Biology</h4>
-                <p class="text-gray-500 text-sm mb-6 font-medium">Diagrams aur concepts ke saath detailed notes.</p>
-                <a href="LINK_DAALE" class="text-red-600 font-black border-b-2 border-red-600 pb-1 hover:text-red-800 transition">GET PDF →</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="pb-20 px-4">
-        <div class="container mx-auto max-w-5xl">
-            <div class="bg-slate-900 rounded-[40px] p-10 md:p-20 text-white relative overflow-hidden shadow-2xl">
-                <div class="relative z-10 grid md:grid-cols-2 gap-10 items-center">
-                    <div>
-                        <h3 class="text-4xl font-black mb-6">Hamara Pata</h3>
-                        <p class="text-xl mb-4 text-yellow-400 font-bold underline italic">SBI Bank Ke Uper, Tehsil Road</p>
-                        <p class="text-2xl font-medium">Karera, Shivpuri (M.P.)</p>
-                        <div class="mt-10">
-                            <p class="text-gray-400 mb-2">Help ke liye call karein:</p>
-                            <a href="tel:9669735935" class="text-3xl font-black tracking-widest text-white">9669735935</a>
-                        </div>
-                    </div>
-                    <div class="text-center bg-white/5 p-10 rounded-3xl border border-white/10 backdrop-blur-sm">
-                        <i class="fas fa-university text-7xl text-yellow-500 mb-6"></i>
-                        <p class="text-lg font-bold">"Shiksha hi aapka bhavishya hai, <br>Sahi chunaav karein."</p>
-                    </div>
+                <h3 class="text-2xl font-bold mb-4 italic">Arts & Humanities</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">Comprehensive coverage of Pol. Science, History, and Geography with answer writing skills.</p>
+                <div class="flex gap-2">
+                    <span class="text-[10px] bg-white/5 px-2 py-1 rounded">Class 11-12</span>
+                    <span class="text-[10px] bg-white/5 px-2 py-1 rounded">Social Sci</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white py-10 text-center border-t border-gray-100">
-        <p class="text-gray-400 font-bold tracking-widest uppercase text-xs">&copy; 2025 A2Z COACHING KARERA | PROUDLY BUILT BY RITIK</p>
+    <section class="py-24 bg-slate-900/50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="glass-card p-10 md:p-16 rounded-[3rem] border-yellow-500/20 text-center relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-right from-transparent via-yellow-500 to-transparent"></div>
+                <h2 class="text-3xl font-black mb-8 uppercase tracking-tighter">Visit the Academy</h2>
+                <div class="flex flex-col md:flex-row justify-around items-center gap-10">
+                    <div class="space-y-4">
+                        <i class="fas fa-map-marker-alt text-4xl text-yellow-500"></i>
+                        <p class="text-xl font-light">Tehsil Road, <br><strong>SBI Bank Ke Uper</strong>, <br>Karera (M.P.)</p>
+                    </div>
+                    <div class="space-y-4">
+                        <i class="fas fa-phone-alt text-4xl text-yellow-500"></i>
+                        <p class="text-3xl font-black tracking-widest uppercase">9669735935</p>
+                        <p class="text-slate-500 text-sm">Call for Batch Timings</p>
+                    </div>
+                </div>
+                <div class="mt-12 pt-8 border-t border-white/5">
+                    <p class="text-slate-500 uppercase tracking-widest text-[10px] font-bold">Director & Mentor</p>
+                    <p class="text-2xl font-black italic gradient-text uppercase">Abhi Sir</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 border-t border-white/5 text-center">
+        <p class="text-slate-600 text-xs font-bold uppercase tracking-[0.2em]">© 2025 A2Z Coaching Karera | Built by Ritik</p>
     </footer>
 
 </body>
