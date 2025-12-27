@@ -3,163 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A TO Z Classes | Abhi Sir - Karera</title>
+    <title>A2Z Coaching | Classes 9th - 12th</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Hind:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --primary: #6366f1; --accent: #a855f7; --dark: #020617; }
-        body { font-family: 'Plus Jakarta Sans', 'Hind', sans-serif; background-color: var(--dark); color: white; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .gradient-text { background: linear-gradient(135deg, #818cf8, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-hover:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px -20px var(--primary); }
-        .animate-spin-slow { animation: spin 8s linear infinite; }
-        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #020617; }
-        ::-webkit-scrollbar-thumb { background: #312e81; border-radius: 10px; }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="selection:bg-indigo-500/30 overflow-x-hidden">
+<body class="bg-slate-50 font-sans text-gray-800">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-[1000] px-6 py-4">
-        <div class="max-w-7xl mx-auto glass rounded-3xl px-8 py-4 flex justify-between items-center shadow-2xl border-indigo-500/20">
-            <div class="flex items-center gap-4">
-                <div class="bg-indigo-600 w-12 h-12 rounded-2xl flex items-center justify-center font-bold italic text-2xl shadow-lg">A2Z</div>
-                <div class="hidden sm:block">
-                    <h1 class="text-xl font-bold tracking-tighter uppercase leading-none">A TO Z CLASSES</h1>
-                    <p class="text-[9px] text-indigo-400 font-bold tracking-[0.3em] uppercase italic">Karera Centre</p>
-                </div>
-            </div>
-            <div class="flex items-center gap-6">
-                <a href="#admission" class="bg-white text-black px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-indigo-600 hover:text-white transition-all uppercase italic">Enroll Now</a>
-            </div>
+    <nav class="bg-slate-900 p-4 text-white sticky top-0 z-50 shadow-xl border-b-2 border-yellow-500">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-black italic text-yellow-400">A2Z <span class="text-white not-italic text-lg">COACHING CENTER</span></h1>
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a href="#home" class="hover:text-yellow-400 font-medium">Home</a></li>
+                <li><a href="#classes" class="hover:text-yellow-400 font-medium">Our Batches</a></li>
+                <li><a href="#contact" class="bg-yellow-500 text-slate-900 px-6 py-2 rounded-full font-bold hover:bg-white transition">Enroll Now</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center pt-32 pb-20 px-6 relative overflow-hidden">
-        <div class="absolute -top-24 -left-24 w-96 h-96 bg-indigo-600/10 blur-[120px] rounded-full"></div>
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
-            <div class="space-y-8 text-center lg:text-left">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-indigo-500/30 text-indigo-400 text-[10px] font-bold uppercase tracking-widest italic">
-                    <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
-                    Best Coaching in Karera
-                </div>
-                <h2 class="text-5xl md:text-8xl font-extrabold italic leading-[0.9] tracking-tighter">
-                    TARGETING <br> <span class="gradient-text italic">EXCELLENCE.</span>
-                </h2>
-                <!-- New Requested Line -->
-                <p class="text-xl md:text-2xl font-bold text-indigo-300 italic uppercase tracking-tight">
-                    सबसे कम फीस में सबसे बेहतरीन शिक्षा, <br class="hidden md:block"> अब आपके शहर करैरा में।
-                </p>
-                <p class="text-slate-400 text-lg max-w-lg mx-auto lg:mx-0 leading-relaxed italic">
-                    9वीं से 12वीं तक के छात्रों के लिए विशेष मार्गदर्शन। <span class="text-white">अभि सर</span> के सानिध्य में सफलता की गारंटी।
-                </p>
-                <div class="flex flex-wrap justify-center lg:justify-start gap-6 pt-4">
-                    <a href="https://wa.me/919669735935" class="px-10 py-5 bg-indigo-600 rounded-2xl font-bold text-lg shadow-xl shadow-indigo-600/20 hover:scale-105 transition-transform italic">Apply for Demo</a>
-                    <a href="tel:9669735935" class="px-10 py-5 glass rounded-2xl font-bold text-lg flex items-center gap-3 italic transition-all hover:bg-white/5">Call Now</a>
-                </div>
+    <header class="bg-slate-800 text-white py-20 px-4 text-center border-b-8 border-yellow-500">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Class 9th to 12th Tak Ka <br><span class="text-yellow-400 italic underline">Sahi Maargdarshan</span></h2>
+            <p class="text-xl text-slate-300 mb-8">Boards aur Competitive Exams ki behtareen taiyari - Ab A2Z ke saath!</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#classes" class="bg-yellow-500 text-slate-900 px-8 py-3 rounded-lg font-bold text-lg hover:bg-white transition shadow-lg">Our Subjects</a>
+                <a href="https://wa.me/919669735935" target="_blank" class="bg-green-500 text-white px-8 py-3 rounded-lg font-bold text-lg hover:bg-green-600 transition shadow-lg"><i class="fab fa-whatsapp mr-2"></i>Whatsapp Karein</a>
             </div>
-            <div class="relative group">
-                <img src="poster.png" onerror="this.src='https://via.placeholder.com/600x800/030712/ffffff?text=A2Z+COACHING+POSTER'" class="rounded-[3.5rem] shadow-2xl border border-white/10 w-full transition-all duration-700 group-hover:scale-[1.02]">
+        </div>
+    </header>
+
+    <section id="classes" class="py-16 container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">Hamare Batches</h2>
+            <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-8 border-blue-600">
+                <div class="text-blue-600 font-black text-2xl mb-2">Class 9th & 10th</div>
+                <h4 class="font-bold text-gray-500 mb-4 uppercase tracking-wider text-xs italic">All Subjects</h4>
+                <ul class="space-y-3 font-medium">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Mathematics</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Science (Phy/Chem/Bio)</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Social Science</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>English & Hindi</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-8 border-red-600">
+                <div class="text-red-600 font-black text-2xl mb-2">Class 11th & 12th</div>
+                <h4 class="font-bold text-gray-500 mb-4 uppercase tracking-wider text-xs italic">Science Stream</h4>
+                <ul class="space-y-3 font-medium">
+                    <li><i class="fas fa-atom text-red-500 mr-2"></i>Mathematics</li>
+                    <li><i class="fas fa-dna text-red-500 mr-2"></i>Biology</li>
+                    <li><i class="fas fa-flask text-red-500 mr-2"></i>Physics & Chemistry</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-8 border-green-600">
+                <div class="text-green-600 font-black text-2xl mb-2">Class 11th & 12th</div>
+                <h4 class="font-bold text-gray-500 mb-4 uppercase tracking-wider text-xs italic">Arts & Agriculture</h4>
+                <ul class="space-y-3 font-medium">
+                    <li><i class="fas fa-wheat-awn text-green-500 mr-2"></i>Agriculture (Complete)</li>
+                    <li><i class="fas fa-palette text-green-500 mr-2"></i>Arts (History/Pol.Sci/etc)</li>
+                    <li><i class="fas fa-book-open text-green-500 mr-2"></i>Special Guidance</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Subjects Section -->
-    <section class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="glass p-8 rounded-[2.5rem] text-center card-hover transition-all">
-                <i class="fas fa-atom text-4xl text-blue-400 mb-4 block animate-spin-slow"></i>
-                <h4 class="font-bold uppercase italic tracking-widest text-sm">Physics</h4>
-            </div>
-            <div class="glass p-8 rounded-[2.5rem] text-center card-hover transition-all">
-                <i class="fas fa-flask text-4xl text-purple-400 mb-4 block"></i>
-                <h4 class="font-bold uppercase italic tracking-widest text-sm">Chemistry</h4>
-            </div>
-            <div class="glass p-8 rounded-[2.5rem] text-center card-hover transition-all">
-                <i class="fas fa-square-root-variable text-4xl text-indigo-400 mb-4 block"></i>
-                <h4 class="font-bold uppercase italic tracking-widest text-sm">Mathematics</h4>
-            </div>
-            <div class="glass p-8 rounded-[2.5rem] text-center card-hover transition-all">
-                <i class="fas fa-dna text-4xl text-pink-400 mb-4 block"></i>
-                <h4 class="font-bold uppercase italic tracking-widest text-sm">Biology</h4>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section class="py-24 px-6 bg-white/[0.01]">
-        <div class="max-w-7xl mx-auto text-center">
-            <h3 class="text-4xl md:text-6xl font-black italic uppercase tracking-tighter mb-4">What Our <span class="gradient-text">Stars Say</span></h3>
-            <p class="text-slate-500 font-bold uppercase tracking-widest text-xs italic mb-16">सफलता की गूंज, छात्रों की जुबानी</p>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass p-10 rounded-[3rem] space-y-6 text-left">
-                    <div class="flex gap-1 text-yellow-500"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="italic text-slate-300">"अभि सर के पढ़ाने का तरीका सबसे अलग है। कठिन टॉपिक्स भी बहुत आसानी से समझ आ जाते हैं।"</p>
-                    <p class="font-bold italic">Rahul • Class 12th</p>
+    <section id="contact" class="bg-slate-100 py-16 px-4">
+        <div class="container mx-auto">
+            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-wrap md:flex-nowrap">
+                <div class="w-full md:w-1/2 p-10 bg-slate-900 text-white">
+                    <h3 class="text-3xl font-bold mb-8">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-yellow-400 mt-1 mr-4 text-xl"></i>
+                            <p class="text-lg text-slate-300">Tehsil Road, SBI Kiosk Bank Ke Uper, <br>Dhar (M.P.)</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-yellow-400 mr-4 text-xl"></i>
+                            <p class="text-xl font-bold">9669735935</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-yellow-400 mr-4 text-xl"></i>
+                            <p class="text-lg">Monday - Saturday (8 AM - 7 PM)</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="glass p-10 rounded-[3rem] space-y-6 text-left border-indigo-500/30">
-                    <div class="flex gap-1 text-yellow-500"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="italic text-slate-300">"यहाँ के नोट्स और टेस्ट सीरीज ने मुझे बोर्ड एग्जाम्स में टॉप करने में बहुत मदद की।"</p>
-                    <p class="font-bold italic">Anjali • Class 10th</p>
-                </div>
-                <div class="glass p-10 rounded-[3rem] space-y-6 text-left">
-                    <div class="flex gap-1 text-yellow-500"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="italic text-slate-300">"करैरा की सबसे भरोसेमंद जगह। डाउट क्लियरिंग सेशन्स और गाइडेंस लाजवाब हैं।"</p>
-                    <p class="font-bold italic">Vikash • Class 12th</p>
+                <div class="w-full md:w-1/2 p-10">
+                    <h3 class="text-2xl font-bold mb-6">Demo Class Ke Liye Form Bharein</h3>
+                    <form action="#" class="space-y-4">
+                        <input type="text" placeholder="Student ka Naam" class="w-full p-4 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <select class="w-full p-4 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            <option>Class Select Karein</option>
+                            <option>9th</option>
+                            <option>10th</option>
+                            <option>11th</option>
+                            <option>12th</option>
+                        </select>
+                        <input type="tel" placeholder="Mobile Number" class="w-full p-4 bg-gray-50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <button class="w-full bg-yellow-500 text-slate-900 font-black py-4 rounded-lg uppercase tracking-widest hover:bg-slate-900 hover:text-white transition shadow-lg">Request Call Back</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Admission Form -->
-    <section id="admission" class="py-32 px-6">
-        <div class="max-w-4xl mx-auto glass rounded-[4rem] p-8 md:p-20 relative overflow-hidden">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl md:text-5xl font-black italic uppercase mb-4">Book Your <span class="gradient-text">Demo Class</span></h3>
-                <p class="text-slate-400 italic font-bold">अपना स्लॉट आज ही सुरक्षित करें!</p>
-            </div>
-            <form class="space-y-6" onsubmit="event.preventDefault(); window.location.href='https://wa.me/919669735935?text=Hi Abhi Sir, I want to join A2Z Classes. Name: ' + document.getElementById('name').value">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <input type="text" id="name" placeholder="आपका नाम" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-indigo-500 transition-all font-bold italic" required>
-                    <input type="text" placeholder="कक्षा" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-indigo-500 transition-all font-bold italic" required>
-                </div>
-                <input type="tel" placeholder="मोबाइल नंबर" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-indigo-500 transition-all font-bold italic" required>
-                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-5 rounded-2xl font-black text-lg uppercase shadow-xl transition-all hover:scale-[1.01] italic">
-                    Join A TO Z Classes <i class="fab fa-whatsapp ml-2"></i>
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-16 border-t border-white/5 text-center px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center mb-10">
-            <div class="glass p-8 rounded-3xl text-center">
-                <i class="fas fa-map-marker-alt text-indigo-500 mb-2"></i>
-                <p class="font-bold italic uppercase text-xs">Tahsil Road, Opposite Honda Showroom, Karera</p>
-            </div>
-            <div class="glass p-8 rounded-3xl text-center">
-                <i class="fas fa-phone-alt text-indigo-500 mb-2"></i>
-                <p class="font-bold italic text-sm">Contact Abhi Sir: 9669735935</p>
-            </div>
-        </div>
-        <div class="space-y-4 text-slate-600 font-bold uppercase tracking-[0.4em] text-[10px] italic">
-            <p>A TO Z Classes | Karera Center</p>
-            <p>Created by Ritik Jatav</p>
+    <footer class="bg-slate-900 text-slate-500 py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p class="font-bold text-white mb-2">A2Z COACHING CENTER</p>
+            <p class="text-sm italic mb-4">"Education for a better future"</p>
+            <p class="text-xs">&copy; 2025 A2Z Coaching. All Rights Reserved. | Created by Ritik.</p>
         </div>
     </footer>
-
-    <!-- Floating WhatsApp -->
-    <div class="fixed bottom-8 right-8 z-[1000]">
-        <a href="https://wa.me/919669735935" class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-3xl text-white shadow-2xl hover:scale-110 transition-transform">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
 
 </body>
 </html>
