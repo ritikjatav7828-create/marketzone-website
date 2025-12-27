@@ -9,163 +9,108 @@
     
     <style>
         :root {
-            --brand-bg: #020617;     /* Deep Dark Blue (No White) */
-            --brand-gold: #fbbf24;   /* Premium Gold accent */
-            --glass-white: rgba(255, 255, 255, 0.05);
+            --brand-bg: #020617;     /* Ekdum Dark Blue Background */
+            --brand-gold: #fbbf24;   /* Premium Gold */
+            --card-glass: rgba(255, 255, 255, 0.05);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
         
         body { 
             background-color: var(--brand-bg);
-            /* Dark Texture to avoid plain color */
             background-image: url("https://www.transparenttextures.com/patterns/dark-matter.png");
             color: #f8fafc;
-            overflow-x: hidden;
         }
 
-        /* --- Professional Navbar --- */
         header {
             background: rgba(2, 6, 23, 0.95);
             padding: 20px 8%;
             display: flex; justify-content: space-between; align-items: center;
-            border-bottom: 2px solid var(--brand-gold);
+            border-bottom: 3px solid var(--brand-gold);
             position: sticky; top: 0; z-index: 1000;
-            backdrop-filter: blur(10px);
         }
-        .logo { font-size: 1.8rem; font-weight: 800; color: var(--brand-gold); text-decoration: none; letter-spacing: 1px; }
-        .logo span { color: #ffffff; }
+        .logo { font-size: 1.8rem; font-weight: 800; color: var(--brand-gold); text-decoration: none; }
 
-        /* --- Hero Section with Abhishek Sir --- */
+        /* --- Hero Section --- */
         .hero {
             display: flex; align-items: center; justify-content: space-between;
-            padding: 80px 8%; flex-wrap: wrap-reverse; gap: 50px;
-            background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(15, 23, 42, 0.5) 100%);
+            padding: 60px 8% 100px; flex-wrap: wrap; gap: 40px;
         }
+        .hero-text { flex: 1.2; min-width: 320px; }
+        .hero-text h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; }
+        .hero-text h1 span { color: var(--brand-gold); }
+        .hero-text p { font-size: 1.2rem; color: #94a3b8; margin-bottom: 40px; border-left: 5px solid var(--brand-gold); padding-left: 20px; }
 
-        .hero-content { flex: 1.2; min-width: 320px; }
-        .hero-content h4 { color: var(--brand-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
-        .hero-content h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; }
-        .hero-content h1 span { color: var(--brand-gold); }
-        .hero-content p { font-size: 1.2rem; color: #94a3b8; margin-bottom: 40px; border-left: 4px solid var(--brand-gold); padding-left: 20px; }
-
-        .hero-img { flex: 0.8; min-width: 320px; text-align: center; position: relative; }
+        /* Photo Box */
+        .hero-img { flex: 0.8; min-width: 320px; position: relative; }
         .hero-img img { 
-            width: 100%; max-width: 420px; border-radius: 40px; 
-            border: 10px solid var(--glass-white);
-            box-shadow: 0 0 40px rgba(251, 191, 36, 0.2);
-            transition: 0.4s;
+            width: 100%; border-radius: 30px; 
+            border: 10px solid var(--card-glass);
+            box-shadow: 0 0 50px rgba(251, 191, 36, 0.2);
         }
-        .hero-img:hover img { transform: scale(1.02); border-color: var(--brand-gold); }
+        .hero-img::after {
+            content: "Abhishek Sir (Director)";
+            position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);
+            background: var(--brand-gold); color: #000; padding: 10px 30px;
+            font-weight: 800; border-radius: 10px; white-space: nowrap;
+        }
 
-        /* --- Subject Grid --- */
-        .subjects { padding: 100px 8%; }
-        .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 { font-size: 2.5rem; color: #fff; }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        /* Subject Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 60px 8%; }
         .card { 
-            background: var(--glass-white); padding: 50px 30px; border-radius: 30px; 
-            border: 1px solid rgba(255, 255, 255, 0.1); transition: 0.4s; text-align: center;
+            background: var(--card-glass); padding: 40px; border-radius: 25px; 
+            text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: 0.4s;
         }
-        .card:hover { 
-            background: rgba(251, 191, 36, 0.05); 
-            border-color: var(--brand-gold);
-            transform: translateY(-10px);
-        }
-        .card i { font-size: 3.5rem; color: var(--brand-gold); margin-bottom: 25px; }
-        .card h3 { font-size: 1.8rem; margin-bottom: 15px; color: #fff; }
+        .card:hover { transform: translateY(-10px); border-color: var(--brand-gold); }
+        .card i { font-size: 3.5rem; color: var(--brand-gold); margin-bottom: 20px; }
 
-        /* --- Modern Call to Action --- */
-        .cta-box {
-            background: linear-gradient(rgba(251, 191, 36, 0.1), transparent);
-            padding: 80px 8%; text-align: center; margin: 40px 8%; border-radius: 40px;
-            border: 1px solid rgba(251, 191, 36, 0.2);
-        }
-        .btn-gold {
-            background: var(--brand-gold); color: var(--brand-bg); padding: 18px 45px;
-            border-radius: 15px; text-decoration: none; font-weight: 800;
-            display: inline-block; font-size: 1.1rem; transition: 0.3s;
-            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
-        }
-        .btn-gold:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(251, 191, 36, 0.5); }
-
-        footer { padding: 50px 8%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
-        .whatsapp-float {
-            position: fixed; bottom: 30px; right: 30px; background: #25d366;
-            width: 60px; height: 60px; border-radius: 50%; display: flex;
-            align-items: center; justify-content: center; color: white;
-            font-size: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); z-index: 1000;
+        .btn {
+            background: var(--brand-gold); color: #000; padding: 18px 45px;
+            border-radius: 12px; text-decoration: none; font-weight: 800;
+            display: inline-block; transition: 0.3s;
         }
 
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.5rem; }
-            .hero { text-align: center; }
-            .hero-content p { border-left: none; padding-left: 0; }
-        }
+        footer { padding: 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; }
     </style>
 </head>
 <body>
 
     <header>
         <a href="#" class="logo">A2Z <span>ACADEMY</span></a>
-        <div style="font-weight: 700; color: var(--brand-gold); font-size: 0.9rem;">
-            <i class="fas fa-map-marker-alt"></i> KARERA, MP
-        </div>
+        <div style="font-weight: 700; color: var(--brand-gold);">KARERA'S NO. 1</div>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <h4>Directed by Abhishek Sir</h4>
-            <h1>Shiksha se <span>Safalta</span> tak ka safar.</h1>
-            <p>Agriculture, Biology aur Mathematics ke liye Karera ka sabse vishwasniya digital coaching institute.</p>
-            <a href="https://wa.me/91XXXXXXXXXX" class="btn-gold">Join New Batch 2025</a>
+        <div class="hero-text">
+            <h1>Kal Ka Bhavishya, <br><span>Abhi Sir</span> Ke Saath.</h1>
+            <p>Agriculture, Biology aur Mathematics ki premium coaching. Books aur Laptop icons se bhari modern taiyari.</p>
+            <a href="https://wa.me/91XXXXXXXXXX" class="btn">ADMISSION OPEN 2025</a>
         </div>
         <div class="hero-img">
-            <img src="https://i.postimg.cc/mD7XGkM2/abhi-sir-final.png" alt="Abhishek Sir Director">
+            <img src="sir.png" alt="Director Abhishek Sir">
         </div>
     </section>
 
-    <section class="subjects">
-        <div class="section-header">
-            <h2>Our Specialized Batches</h2>
-            <p style="color: #94a3b8; margin-top: 10px;">Expert guidance in every subject.</p>
+    <div class="grid">
+        <div class="card">
+            <i class="fas fa-book-open"></i>
+            <h3>Digital Notes</h3>
+            <p>Har class ke baad milenge PDF notes aur important questions.</p>
         </div>
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-seedling"></i>
-                <h3>Agriculture</h3>
-                <p style="color: #94a3b8;">PAT & MP-PAT exam focused preparation with custom study material.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-dna"></i>
-                <h3>Biology</h3>
-                <p style="color: #94a3b8;">Conceptual learning for 9th-12th with emphasis on NCERT diagrams.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-calculator"></i>
-                <h3>Mathematics</h3>
-                <p style="color: #94a3b8;">Advanced shortcuts and formula mastery for board examinations.</p>
-            </div>
+        <div class="card">
+            <i class="fas fa-laptop"></i>
+            <h3>Smart Classes</h3>
+            <p>Complex concepts ko laptop aur digital board se samjhein.</p>
         </div>
-    </section>
-
-    <div class="cta-box">
-        <h2 style="font-size: 2.2rem; margin-bottom: 20px;">Abhi Sir Se Counseling Karein</h2>
-        <p style="margin-bottom: 40px; color: #94a3b8;">Career guidance aur admission ke liye turant call karein.</p>
-        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-            <a href="tel:+91XXXXXXXXXX" class="btn-gold" style="background: #fff; color: #020617;">Call: +91 XXXXX XXXXX</a>
-            <a href="https://wa.me/91XXXXXXXXXX" class="btn-gold">Whatsapp Now</a>
+        <div class="card">
+            <i class="fas fa-user-graduate"></i>
+            <h3>Personal Guidance</h3>
+            <p>Abhishek Sir ka 3+ saalon ka shandaar anubhav.</p>
         </div>
     </div>
 
-    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <footer>
-        <p style="font-weight: 800; color: #fff; margin-bottom: 10px;">A2Z Coaching Center Karera</p>
-        <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2025 Education Excellence | Powered by Ritik's Tech Solution</p>
+        <p>&copy; 2025 A2Z Academy Karera | Managed by Ritik</p>
     </footer>
 
 </body>
