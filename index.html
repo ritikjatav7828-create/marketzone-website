@@ -1,53 +1,294 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A2Z Coaching Karera | Home</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>A2Z Coaching | Karera's No. 1 Institute</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-blue: #002347;
+            --gold: #d4af37;
+            --light-gold: #f4e0a1;
+            --white: #ffffff;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: var(--primary-blue);
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: var(--primary-blue);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* --- Hero Section (The Blockbuster Entrance) --- */
+        .hero {
+            background: linear-gradient(rgba(0, 35, 71, 0.8), rgba(0, 35, 71, 0.8)), 
+                        url('https://images.unsplash.com/photo-1523050853021-eb611305961e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+        }
+
+        .cta-button {
+            background: var(--gold);
+            color: var(--primary-blue);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: 0.4s;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background: var(--white);
+        }
+
+        /* --- Stats Section --- */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 50px 10%;
+            background: var(--white);
+            margin-top: -50px;
+            border-radius: 15px;
+            width: 90%;
+            margin-left: 5%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+        }
+
+        .stat-card p {
+            color: #666;
+            font-weight: 600;
+        }
+
+        /* --- Courses Section (Glassmorphism) --- */
+        .courses {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 50%;
+            height: 4px;
+            background: var(--gold);
+            position: absolute;
+            bottom: -10px;
+            left: 25%;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .course-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            border-bottom: 5px solid var(--gold);
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .course-card i {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 50px 5% 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 30px;
+        }
+
+        .social-links a {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+
+        .copyright {
+            border-top: 1px solid var(--glass);
+            padding-top: 20px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav { display: none; }
+        }
+    </style>
 </head>
-<body class="bg-gray-50 font-serif text-gray-900">
-    <div class="bg-[#800000] text-white py-2 overflow-hidden border-b-2 border-yellow-500">
-        <marquee class="font-bold">🔥 New Batches Open: 9th, 10th, 11th, 12th (Agri, Arts, Science) | SBI Bank Ke Uper, Karera | Call: 9669735935</marquee>
-    </div>
+<body>
 
-    <nav class="bg-white shadow-md sticky top-0 z-50 border-b-4 border-[#003366]">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <div class="flex items-center gap-2">
-                <div class="bg-[#003366] text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">A2Z</div>
-                <h1 class="text-xl font-black text-[#003366]">A2Z CLASSES</h1>
-            </div>
-            <div class="hidden md:flex gap-6 font-bold text-xs uppercase tracking-widest text-gray-600">
-                <a href="index.html" class="text-red-800">Home</a>
-                <a href="services.html" class="hover:text-red-800">Courses</a>
-                <a href="pricing.html" class="hover:text-red-800">Fees</a>
-                <a href="contact.html" class="hover:text-red-800">Contact</a>
-            </div>
-            <a href="https://wa.me/919669735935" class="bg-green-600 text-white px-4 py-2 rounded text-xs font-bold shadow-md">WHATSAPP</a>
-        </div>
-    </nav>
-
-    <header class="bg-[#003366] text-white py-20 px-6 text-center border-b-8 border-yellow-500">
-        <div class="container mx-auto">
-            <h2 class="text-4xl md:text-6xl font-bold mb-4">A2Z Coaching Center</h2>
-            <p class="text-yellow-400 text-xl font-bold italic mb-8">Abhi Sir Ke Saath Karo Boards Ki Taiyari</p>
-            <div class="bg-white/10 p-6 rounded-lg inline-block border border-white/20 backdrop-blur-md">
-                <p class="text-lg">📍 Tehsil Road, SBI Bank Ke Uper, Karera</p>
-            </div>
-        </div>
+    <header>
+        <a href="#" class="logo">A2Z <span style="color: white;">COACHING</span></a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#about">Abhi Sir</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <section class="py-16 container mx-auto px-4 grid md:grid-cols-4 gap-6 text-center">
-        <div class="p-6 bg-white shadow rounded border-b-4 border-blue-900"><h4 class="font-bold">9th-10th All Sub</h4></div>
-        <div class="p-6 bg-white shadow rounded border-b-4 border-green-700"><h4 class="font-bold">Agriculture</h4></div>
-        <div class="p-6 bg-white shadow rounded border-b-4 border-purple-800"><h4 class="font-bold">Arts Stream</h4></div>
-        <div class="p-6 bg-white shadow rounded border-b-4 border-red-700"><h4 class="font-bold">Maths/Biology</h4></div>
+    <section class="hero" id="home">
+        <h1>Sikshya Jo <span>Zindagi</span> Badal De</h1>
+        <p>Karera's premier coaching institute for Agriculture, Science, and Competitive Exams. Build your future with Abhi Sir's expert guidance.</p>
+        <a href="https://wa.me/91XXXXXXXXXX" class="cta-button">Join Elite Batch Now</a>
     </section>
 
-    <footer class="bg-slate-900 text-white py-10 text-center border-t-4 border-yellow-500">
-        <p class="font-bold text-yellow-500">Sanchalak: Abhi Sir</p>
-        <p class="text-xs text-gray-500 mt-4 uppercase">Built by Ritik</p>
+    <div class="stats">
+        <div class="stat-card">
+            <h3>500+</h3>
+            <p>Students Placed</p>
+        </div>
+        <div class="stat-card">
+            <h3>10+</h3>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-card">
+            <h3>100%</h3>
+            <p>Result Oriented</p>
+        </div>
+    </div>
+
+    <section class="courses" id="courses">
+        <h2 class="section-title">Our Premium Courses</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <i class="fas fa-seedling"></i>
+                <h3>Agriculture</h3>
+                <p>Special batches for PAT and Agriculture exams with practical knowledge.</p>
+            </div>
+            <div class="course-card">
+                <i class="fas fa-flask"></i>
+                <h3>Science (9th-12th)</h3>
+                <p>Conceptual learning for physics, chemistry, and biology to crack boards.</p>
+            </div>
+            <div class="course-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Competitive Exams</h3>
+                <p>Focused preparation for state level and central government job exams.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h2>A2Z Coaching Center</h2>
+            <p>Near Main Market, Karera, Shivpuri (M.P.)</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 A2Z Coaching. Designed with ❤️ by Ritik.
+        </div>
     </footer>
+
 </body>
 </html>
