@@ -3,175 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A2Z Coaching Karera | Director: Abhi Sir</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>A2Z Coaching Karera | Directed by Abhi Sir</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --primary-blue: #002e5b;
-            --gold-accent: #d4af37;
-            --light-bg: #f4f7fa;
+            --brand-blue: #002147; /* Deep Navy - The Color of Trust */
+            --brand-gold: #c5a059; /* Sophisticated Gold */
+            --off-white: #f8fafc;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
         
         body { 
-            background-color: var(--light-bg);
-            /* Professional grid background for educational feel */
-            background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
-            background-size: 20px 20px;
-            color: #333;
+            background-color: var(--off-white);
+            /* Professional Academic Background Texture */
+            background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+            color: #1e293b;
         }
 
-        /* --- Header --- */
+        /* --- Executive Header --- */
         header {
-            background: var(--primary-blue);
-            padding: 15px 8%;
+            background: var(--brand-blue);
+            padding: 20px 8%;
             display: flex; justify-content: space-between; align-items: center;
-            border-bottom: 4px solid var(--gold-accent);
+            border-bottom: 5px solid var(--brand-gold);
             position: sticky; top: 0; z-index: 1000;
         }
-        .logo { font-size: 1.8rem; font-weight: 800; color: var(--gold-accent); text-decoration: none; }
-        .logo span { color: white; }
+        .logo { font-size: 1.8rem; font-weight: 800; color: white; text-decoration: none; }
+        .logo span { color: var(--brand-gold); }
 
-        /* --- Hero Section --- */
+        /* --- Hero Section (Premium Vibe) --- */
         .hero {
-            padding: 80px 8%;
-            background: linear-gradient(rgba(0, 46, 91, 0.9), rgba(0, 46, 91, 0.9)), 
-                        url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1500&q=80');
+            padding: 100px 8%;
+            background: linear-gradient(rgba(0, 33, 71, 0.9), rgba(0, 33, 71, 0.9)), 
+                        url('https://images.unsplash.com/photo-1523050853021-eb611305961e?auto=format&fit=crop&w=1500&q=80');
             background-size: cover; background-position: center;
-            color: white; text-align: center; border-radius: 0 0 50px 50px;
+            color: white; text-align: center; border-radius: 0 0 80px 80px;
         }
-        .hero h1 { font-size: 3rem; margin-bottom: 15px; }
-        .hero p { font-size: 1.2rem; color: #ddd; margin-bottom: 30px; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; line-height: 1.2; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto; }
 
-        /* --- Director Section (Abhi Sir) --- */
-        .director-section {
-            padding: 80px 8%;
-            display: flex; align-items: center; gap: 50px;
-            flex-wrap: wrap; background: white; margin: 40px 0;
-            border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        /* --- Director's Message (Professional Profile) --- */
+        .director-desk {
+            max-width: 1100px; margin: -60px auto 60px;
+            background: white; border-radius: 20px;
+            display: flex; overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            border: 1px solid #e2e8f0;
         }
-        .director-img {
-            flex: 1; min-width: 300px; text-align: center;
-        }
-        .director-img img {
-            width: 100%; max-width: 350px;
-            border-radius: 20px;
-            border: 8px solid var(--light-bg);
-            box-shadow: 15px 15px 0 var(--gold-accent);
-        }
-        .director-info { flex: 2; min-width: 300px; }
-        .director-info h2 { color: var(--primary-blue); font-size: 2.5rem; margin-bottom: 10px; }
-        .director-info h4 { color: var(--gold-accent); font-weight: 700; margin-bottom: 20px; text-transform: uppercase; }
-        .director-info p { line-height: 1.8; color: #555; font-size: 1.1rem; margin-bottom: 20px; }
+        .director-img { flex: 1; min-width: 300px; background: #e5e7eb; }
+        .director-img img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .director-content { flex: 1.5; padding: 50px; }
+        .director-content h4 { color: var(--brand-gold); font-weight: 700; margin-bottom: 10px; text-transform: uppercase; }
+        .director-content h2 { font-size: 2.5rem; color: var(--brand-blue); margin-bottom: 20px; }
+        .director-content p { line-height: 1.8; color: #475569; font-size: 1.1rem; font-style: italic; }
 
-        /* --- Subject Cards --- */
-        .subjects { padding: 40px 8%; }
-        .grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;
+        /* --- Subjects Grid --- */
+        .section-title { text-align: center; font-size: 2.5rem; color: var(--brand-blue); margin-bottom: 50px; font-weight: 800; }
+        .subjects { padding: 60px 8%; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        
+        .s-card {
+            background: white; padding: 50px 30px; border-radius: 15px;
+            text-align: center; border-top: 6px solid var(--brand-gold);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease;
         }
-        .card {
-            background: white; padding: 40px 20px; border-radius: 20px; text-align: center;
-            border-bottom: 5px solid var(--gold-accent); transition: 0.3s;
-        }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-        .card i { font-size: 3rem; color: var(--primary-blue); margin-bottom: 20px; }
+        .s-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        .s-card i { font-size: 3.5rem; color: var(--brand-blue); margin-bottom: 25px; }
+        .s-card h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--brand-blue); }
 
-        /* --- Buttons --- */
-        .btn {
-            background: var(--primary-blue); color: var(--gold-accent);
-            padding: 12px 30px; border-radius: 10px; text-decoration: none;
-            font-weight: 700; display: inline-block; transition: 0.3s;
+        /* --- CTA Button --- */
+        .btn-brand {
+            background: var(--brand-blue); color: var(--brand-gold);
+            padding: 16px 40px; border-radius: 8px; text-decoration: none;
+            font-weight: 800; display: inline-block; transition: 0.3s;
+            border: 2px solid var(--brand-blue); text-transform: uppercase;
         }
-        .btn:hover { background: var(--gold-accent); color: var(--primary-blue); }
+        .btn-brand:hover { background: var(--brand-gold); color: var(--brand-blue); border-color: var(--brand-gold); }
 
-        .cta-whatsapp {
+        footer { background: #0f172a; color: #94a3b8; padding: 60px 8%; text-align: center; }
+        
+        .whatsapp-float {
             position: fixed; bottom: 30px; right: 30px;
-            background: #25d366; color: white; padding: 15px 25px;
-            border-radius: 50px; text-decoration: none; font-weight: 700;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 1000;
+            background: #25d366; color: white; width: 60px; height: 60px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 1000;
         }
 
-        footer { background: #111; color: #777; padding: 40px; text-align: center; }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .director-section { text-align: center; }
+        @media (max-width: 900px) {
+            .director-desk { flex-direction: column; margin: 20px 5%; }
+            .hero h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="#" class="logo">A2Z <span>COACHING</span></a>
-        <div style="color: white; font-weight: 600;"><i class="fas fa-laptop"></i> Smart Learning</div>
+        <a href="#" class="logo">A2Z <span>ACADEMY</span></a>
+        <div style="color: white; font-weight: 600;"><i class="fas fa-graduation-cap"></i> Karera's No. 1 Institute</div>
     </header>
 
     <section class="hero">
-        <h1>Ab Sapne Honge <span>Sakar</span></h1>
-        <p>Agriculture, Biology aur Mathematics ka No. 1 Sansthan - Karera</p>
-        <div style="font-size: 2.5rem; color: var(--gold-accent); display: flex; justify-content: center; gap: 20px;">
-            <i class="fas fa-book"></i> <i class="fas fa-laptop-code"></i> <i class="fas fa-user-graduate"></i>
+        <h1>Educating for <span>Excellence</span></h1>
+        <p>Karera's most prestigious coaching center for Agriculture, Biology, and Mathematics. We build foundations for a successful career.</p>
+        <div style="display: flex; justify-content: center; gap: 20px; font-size: 2.5rem; color: var(--brand-gold);">
+            <i class="fas fa-book-open"></i> <i class="fas fa-laptop"></i> <i class="fas fa-microscope"></i>
         </div>
     </section>
 
-    <section class="director-section">
+    <div class="director-desk">
         <div class="director-img">
-            <img src="https://images.unsplash.com/photo-1544717297-fa154da09f9d?auto=format&fit=crop&w=400&q=80" alt="Director Abhi Sir">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80" alt="Director Abhi Sir">
         </div>
-        <div class="director-info">
-            <h4>Director's Message</h4>
+        <div class="director-content">
+            <h4>From the Director's Desk</h4>
             <h2>Abhi Sir</h2>
             <p>
-                "Shiksha sirf marks lana nahi, balki bhavishya ke liye taiyar hona hai. 
-                Pichle 3 saalon se hamara ek hi maqsad hai - Karera ke har student ko 
-                Agriculture, Biology aur Maths mein itna mazboot banana ki wo competitive exams 
-                mein sabse aage rahein."
+                "At A2Z Coaching, our mission is to provide quality education that empowers students. With over 3 years of excellence in Karera, we specialize in Agriculture, Biology, and Maths, ensuring every student gets personalized attention and the best study material."
             </p>
-            <p style="font-style: italic; font-weight: 600;">
-                "Hamare yahan bacho ko concepts ratwaye nahi, balki samjhaye jaate hain."
-            </p>
-            <a href="tel:+91XXXXXXXXXX" class="btn">Talk to Abhi Sir</a>
+            <div style="margin-top: 30px;">
+                <a href="tel:+91XXXXXXXXXX" class="btn-brand">Get in Touch</a>
+            </div>
         </div>
-    </section>
+    </div>
 
     <section class="subjects">
-        <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.2rem; color: var(--primary-blue);">Hamare Special Courses</h2>
+        <h2 class="section-title">Our Specialized Batches</h2>
         <div class="grid">
-            <div class="card">
+            <div class="s-card">
                 <i class="fas fa-seedling"></i>
                 <h3>Agriculture</h3>
-                <p style="margin-bottom: 20px;">PAT & MP-PAT Specialization with Digital Notes.</p>
-                <a href="#" class="btn">Syllabus & Notes</a>
+                <p style="color: #64748b; margin-bottom: 20px;">Dedicated preparation for PAT & MP-PAT with specialized notes.</p>
+                <a href="#" class="btn-brand" style="font-size: 0.8rem;">View Details</a>
             </div>
-            <div class="card">
+            <div class="s-card">
                 <i class="fas fa-dna"></i>
                 <h3>Biology</h3>
-                <p style="margin-bottom: 20px;">Class 9th-12th Concept Mastery with Diagrams.</p>
-                <a href="#" class="btn">Syllabus & Notes</a>
+                <p style="color: #64748b; margin-bottom: 20px;">Comprehensive 9th-12th Biology with focus on NCERT & Diagrams.</p>
+                <a href="#" class="btn-brand" style="font-size: 0.8rem;">View Details</a>
             </div>
-            <div class="card">
+            <div class="s-card">
                 <i class="fas fa-calculator"></i>
                 <h3>Mathematics</h3>
-                <p style="margin-bottom: 20px;">Higher Secondary Maths with Practice Sets.</p>
-                <a href="#" class="btn">Syllabus & Notes</a>
+                <p style="color: #64748b; margin-bottom: 20px;">Foundation & Board prep for 9th-12th Mathematics with shortcuts.</p>
+                <a href="#" class="btn-brand" style="font-size: 0.8rem;">View Details</a>
             </div>
         </div>
     </section>
 
-    <section style="text-align: center; padding: 80px 8%; background: var(--primary-blue); color: white;">
-        <h2>Join Karera's Educational Revolution</h2>
-        <p style="margin: 20px 0 35px; opacity: 0.8;">New Batches starting from 1st April. Limited Seats Available!</p>
-        <a href="https://wa.me/91XXXXXXXXXX" class="btn" style="background: var(--gold-accent); color: var(--primary-blue); padding: 15px 40px; font-size: 1.1rem;">Register for Free Demo Class</a>
+    <section style="background: var(--brand-blue); color: white; padding: 80px 8%; text-align: center; border-radius: 80px 80px 0 0;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Admission Open for Session 2025-26</h2>
+        <p style="margin-bottom: 40px; opacity: 0.8;">Secure your child's future with Karera's most trusted mentor.</p>
+        <a href="https://wa.me/91XXXXXXXXXX" class="btn-brand" style="background: var(--brand-gold); color: var(--brand-blue); border: none; padding: 20px 50px;">Apply for Admission</a>
     </section>
 
-    <a href="https://wa.me/91XXXXXXXXXX" class="cta-whatsapp"><i class="fab fa-whatsapp"></i> Chat with Us</a>
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <footer>
-        <p>&copy; 2025 A2Z Coaching Center Karera | Karera, MP</p>
-        <p style="margin-top: 10px; font-size: 0.8rem; color: var(--gold-accent);">Managed & Developed by Ritik</p>
+        <p style="font-size: 1.2rem; font-weight: 800; color: white; margin-bottom: 10px;">A2Z Coaching Center Karera</p>
+        <p>&copy; 2025 Education Excellence | Managed & Designed by Ritik</p>
     </footer>
 
 </body>
