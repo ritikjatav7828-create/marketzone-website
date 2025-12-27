@@ -6,145 +6,157 @@
     <title>A2Z Coaching | Karera | Abhi Sir</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root { --drishti-blue: #003366; --drishti-maroon: #800000; }
-        .ticker-bg { background: var(--drishti-maroon); }
-        .nav-shadow { shadow-sm; border-bottom: 3px solid var(--drishti-maroon); }
+        body { font-family: 'Roboto', sans-serif; }
+        h1, h2, h3 { font-family: 'Merriweather', serif; }
+        .logo-gradient { background: linear-gradient(135deg, #003366 0%, #001a33 100%); }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-serif">
+<body class="bg-gray-50 text-gray-800">
 
-    <div class="ticker-bg text-white py-2 overflow-hidden">
+    <div class="bg-[#800000] text-white py-2 overflow-hidden border-b border-yellow-500">
         <marquee behavior="scroll" direction="left" class="font-bold text-sm">
-            New Batch Starting for Class 10th & 12th Board Exams 2025 | Sanchalak: Abhi Sir | Contact: 9669735935 | SBI Bank Ke Uper, Karera
+            🔥 New Batches for 9th, 10th, 11th & 12th starting soon! | Sanchalak: Abhi Sir | Location: SBI Bank Ke Uper, Tehsil Road, Karera | Helpline: 9669735935
         </marquee>
     </div>
 
-    <nav class="bg-white sticky top-0 z-50 shadow-md border-b-4 border-[#800000]">
-        <div class="container mx-auto flex justify-between items-center p-4">
+    <nav class="bg-white sticky top-0 z-50 shadow-lg border-b-4 border-[#800000]">
+        <div class="container mx-auto flex justify-between items-center p-3">
             <div class="flex items-center gap-3">
-                <img src="https://via.placeholder.com/50" alt="Logo" class="rounded-full border-2 border-maroon-800">
+                <div class="logo-gradient w-14 h-14 rounded-full border-2 border-yellow-500 flex items-center justify-center shadow-md">
+                    <span class="text-white font-black italic text-lg">A2Z</span>
+                </div>
                 <div>
-                    <h1 class="text-2xl font-black text-[#003366] leading-none">A2Z COACHING</h1>
-                    <p class="text-[10px] font-bold text-red-700 tracking-tighter italic">DHARMA PRAKASHAYATE SHIKSHA</p>
+                    <h1 class="text-xl md:text-2xl font-black text-[#003366] leading-none">A2Z COACHING</h1>
+                    <p class="text-[9px] font-bold text-red-700 tracking-widest uppercase italic">The Center of Excellence</p>
                 </div>
             </div>
-            <div class="hidden lg:flex gap-6 font-bold text-sm text-gray-700">
-                <a href="#" class="hover:text-red-800">HOME</a>
-                <a href="#courses" class="hover:text-red-800">COURSES</a>
-                <a href="#resources" class="hover:text-red-800">STUDY MATERIAL</a>
-                <a href="#contact" class="hover:text-red-800">CONTACT US</a>
+            
+            <div class="hidden lg:flex gap-8 font-bold text-sm tracking-tight">
+                <a href="#home" class="text-gray-700 hover:text-red-800">HOME</a>
+                <a href="#about" class="text-gray-700 hover:text-red-800">ABOUT US</a>
+                <a href="#courses" class="text-gray-700 hover:text-red-800">COURSES</a>
+                <a href="#notes" class="text-gray-700 hover:text-red-800">STUDY MATERIAL</a>
             </div>
-            <a href="https://wa.me/919669735935" class="bg-[#800000] text-white px-5 py-2 rounded font-bold text-sm shadow-lg">ADMISSION OPEN</a>
+
+            <a href="tel:9669735935" class="bg-[#003366] text-white px-5 py-2 rounded font-bold text-sm flex items-center gap-2">
+                <i class="fas fa-phone-alt"></i> CALL NOW
+            </a>
         </div>
     </nav>
 
-    <header class="bg-[#003366] text-white py-20 px-6 border-b-8 border-yellow-500">
-        <div class="container mx-auto grid md:grid-cols-2 items-center gap-10">
-            <div class="text-left">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Karera's Leading Educational Institute</h2>
-                <p class="text-xl mb-8 border-l-4 border-yellow-500 pl-4">Class 9th to 12th | Agriculture | Arts | Science <br><span class="text-yellow-400">Mentorship by Abhi Sir</span></p>
+    <header id="home" class="bg-slate-900 text-white py-20 px-6 relative overflow-hidden border-b-8 border-yellow-500">
+        <div class="container mx-auto grid md:grid-cols-2 gap-10 items-center">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight text-yellow-500 italic">"Shiksha Hi Safalta Ki Kunji Hai"</h2>
+                <p class="text-xl mb-8 text-gray-300 border-l-4 border-white pl-4">Class 9th to 12th Board Specialization. <br>Agriculture, Arts, Maths & Biology Streams.</p>
                 <div class="flex gap-4">
-                    <button class="bg-yellow-500 text-black px-6 py-3 font-bold rounded shadow-xl">Join a Batch</button>
-                    <button class="border-2 border-white px-6 py-3 font-bold rounded">Read More</button>
+                    <a href="https://wa.me/919669735935" class="bg-green-600 text-white px-8 py-3 rounded font-bold shadow-lg hover:bg-green-700 transition">Join WhatsApp</a>
+                    <a href="#notes" class="bg-white text-slate-900 px-8 py-3 rounded font-bold shadow-lg">Notes PDF</a>
                 </div>
             </div>
-            <div class="hidden md:block">
-                <div class="bg-white/10 p-6 rounded-lg border border-white/20 backdrop-blur-md">
-                    <h3 class="text-yellow-400 text-xl font-bold mb-4 italic text-center underline">Why Choose A2Z?</h3>
-                    <ul class="space-y-3">
-                        <li><i class="fas fa-check-circle mr-2"></i> Expert Faculty (Abhi Sir)</li>
-                        <li><i class="fas fa-check-circle mr-2"></i> Comprehensive PDF Notes</li>
-                        <li><i class="fas fa-check-circle mr-2"></i> Weekly Test Series</li>
-                    </ul>
-                </div>
+            <div class="bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm text-center">
+                <div class="text-yellow-500 text-4xl mb-4 italic">Sanchalak</div>
+                <h3 class="text-5xl font-black uppercase tracking-tighter">Abhi Sir</h3>
+                <p class="mt-4 text-gray-400">Karera's Most Trusted Educationist</p>
             </div>
         </div>
     </header>
 
-    <section id="courses" class="py-16 container mx-auto px-4">
-        <div class="flex items-center gap-4 mb-10">
-            <h3 class="text-2xl font-bold text-[#003366]">COURSES OFFERED</h3>
-            <div class="flex-grow h-[2px] bg-gray-200"></div>
+    <section id="courses" class="py-20 container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h3 class="text-3xl font-bold text-[#003366] mb-2 uppercase italic tracking-tighter">Batches & Specialization</h3>
+            <div class="w-24 h-1 bg-red-800 mx-auto"></div>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white border border-gray-200 hover:shadow-2xl transition overflow-hidden">
-                <div class="bg-[#800000] text-white p-3 font-bold text-center">FOUNDATION</div>
-                <div class="p-6">
-                    <h4 class="font-bold text-lg mb-2">Class 9th & 10th</h4>
-                    <p class="text-sm text-gray-600 mb-4 italic">All Subjects (Maths, Science, SST, English)</p>
-                    <a href="#" class="text-red-800 font-bold text-sm">Know More →</a>
-                </div>
+            <div class="bg-white border-t-4 border-blue-800 shadow-md p-6 text-center hover:shadow-2xl transition">
+                <h4 class="font-bold text-xl mb-3">Class 9th & 10th</h4>
+                <p class="text-sm text-gray-500 mb-4 font-bold uppercase">All Subjects (NCERT)</p>
+                <ul class="text-left text-sm space-y-2 mb-6">
+                    <li><i class="fas fa-check text-green-600 mr-2"></i> Mathematics & Science</li>
+                    <li><i class="fas fa-check text-green-600 mr-2"></i> Social Science & Hindi</li>
+                </ul>
             </div>
-            <div class="bg-white border border-gray-200 hover:shadow-2xl transition overflow-hidden">
-                <div class="bg-green-800 text-white p-3 font-bold text-center">AGRICULTURE</div>
-                <div class="p-6">
-                    <h4 class="font-bold text-lg mb-2">Class 11th & 12th</h4>
-                    <p class="text-sm text-gray-600 mb-4 italic">Specialized Agriculture Stream (Crop & Animal)</p>
-                    <a href="#" class="text-green-800 font-bold text-sm">Know More →</a>
-                </div>
+            <div class="bg-white border-t-4 border-green-800 shadow-md p-6 text-center hover:shadow-2xl transition">
+                <h4 class="font-bold text-xl mb-3">Agriculture</h4>
+                <p class="text-sm text-gray-500 mb-4 font-bold uppercase">Class 11th & 12th</p>
+                <ul class="text-left text-sm space-y-2 mb-6">
+                    <li><i class="fas fa-check text-green-600 mr-2"></i> Crop Production</li>
+                    <li><i class="fas fa-check text-green-600 mr-2"></i> Animal Husbandry</li>
+                </ul>
             </div>
-            <div class="bg-white border border-gray-200 hover:shadow-2xl transition overflow-hidden">
-                <div class="bg-purple-800 text-white p-3 font-bold text-center">ARTS</div>
-                <div class="p-6">
-                    <h4 class="font-bold text-lg mb-2">Class 11th & 12th</h4>
-                    <p class="text-sm text-gray-600 mb-4 italic">History, Pol. Science, Geography & Humanities</p>
-                    <a href="#" class="text-purple-800 font-bold text-sm">Know More →</a>
-                </div>
+            <div class="bg-white border-t-4 border-purple-800 shadow-md p-6 text-center hover:shadow-2xl transition">
+                <h4 class="font-bold text-xl mb-3">Arts Stream</h4>
+                <p class="text-sm text-gray-500 mb-4 font-bold uppercase">Class 11th & 12th</p>
+                <ul class="text-left text-sm space-y-2 mb-6">
+                    <li><i class="fas fa-check text-green-600 mr-2"></i> History & Pol. Science</li>
+                    <li><i class="fas fa-check text-green-600 mr-2"></i> Geography & Economics</li>
+                </ul>
             </div>
-            <div class="bg-white border border-gray-200 hover:shadow-2xl transition overflow-hidden">
-                <div class="bg-blue-800 text-white p-3 font-bold text-center">SCIENCE</div>
-                <div class="p-6">
-                    <h4 class="font-bold text-lg mb-2">Class 11th & 12th</h4>
-                    <p class="text-sm text-gray-600 mb-4 italic">Physics, Chemistry, Maths & Biology</p>
-                    <a href="#" class="text-blue-800 font-bold text-sm">Know More →</a>
-                </div>
+            <div class="bg-white border-t-4 border-red-800 shadow-md p-6 text-center hover:shadow-2xl transition">
+                <h4 class="font-bold text-xl mb-3">Science (M/B)</h4>
+                <p class="text-sm text-gray-500 mb-4 font-bold uppercase">Class 11th & 12th</p>
+                <ul class="text-left text-sm space-y-2 mb-6">
+                    <li><i class="fas fa-check text-green-600 mr-2"></i> Physics & Chemistry</li>
+                    <li><i class="fas fa-check text-green-600 mr-2"></i> Biology & Maths</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="resources" class="bg-gray-100 py-16 px-4 border-y border-gray-200">
+    <section id="notes" class="bg-slate-100 py-16 px-4">
         <div class="container mx-auto">
-            <h3 class="text-center text-3xl font-bold text-[#003366] mb-12 italic underline underline-offset-8 decoration-[#800000]">Free Study Material Portal</h3>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="bg-white p-8 shadow-md rounded border-t-4 border-[#800000]">
-                    <i class="fas fa-file-pdf text-4xl text-red-800 mb-4"></i>
-                    <h4 class="font-bold text-xl mb-2">Daily Notes</h4>
-                    <p class="text-sm text-gray-500 mb-6">Abhi Sir ke haath se likhe special notes.</p>
-                    <button class="w-full border-2 border-[#800000] text-[#800000] font-bold py-2 hover:bg-[#800000] hover:text-white transition">ACCESS FOLDER</button>
+            <h3 class="text-center text-3xl font-bold text-[#003366] mb-12 italic underline decoration-[#800000] underline-offset-8">Study Material Portal</h3>
+            <div class="grid md:grid-cols-4 gap-4">
+                <a href="#" class="bg-white p-6 rounded shadow hover:bg-[#800000] hover:text-white transition group text-center">
+                    <i class="fas fa-calculator text-3xl mb-3 text-red-800 group-hover:text-white"></i>
+                    <p class="font-bold uppercase text-xs">Maths Notes</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded shadow hover:bg-[#800000] hover:text-white transition group text-center">
+                    <i class="fas fa-dna text-3xl mb-3 text-red-800 group-hover:text-white"></i>
+                    <p class="font-bold uppercase text-xs">Biology Notes</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded shadow hover:bg-[#800000] hover:text-white transition group text-center">
+                    <i class="fas fa-wheat-awn text-3xl mb-3 text-red-800 group-hover:text-white"></i>
+                    <p class="font-bold uppercase text-xs">Agriculture Notes</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded shadow hover:bg-[#800000] hover:text-white transition group text-center">
+                    <i class="fas fa-palette text-3xl mb-3 text-red-800 group-hover:text-white"></i>
+                    <p class="font-bold uppercase text-xs">Arts Notes</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 bg-white">
+        <div class="container mx-auto max-w-5xl">
+            <div class="bg-[#003366] rounded-3xl overflow-hidden shadow-2xl flex flex-wrap md:flex-nowrap">
+                <div class="w-full md:w-1/2 p-12 text-white">
+                    <h4 class="text-yellow-500 font-bold mb-4 uppercase tracking-widest">Visit Us</h4>
+                    <p class="text-3xl font-bold mb-6 italic leading-snug">SBI Bank Ke Uper,<br>Tehsil Road, Karera</p>
+                    <div class="space-y-4">
+                        <p class="text-xl font-black tracking-widest bg-white/10 p-3 rounded text-center border border-white/20">
+                            <i class="fas fa-phone-alt mr-3 text-yellow-500"></i> 9669735935
+                        </p>
+                    </div>
                 </div>
-                <div class="bg-white p-8 shadow-md rounded border-t-4 border-[#800000]">
-                    <i class="fas fa-video text-4xl text-red-800 mb-4"></i>
-                    <h4 class="font-bold text-xl mb-2">Video Lectures</h4>
-                    <p class="text-sm text-gray-500 mb-6">Concept videos for difficult topics.</p>
-                    <button class="w-full border-2 border-[#800000] text-[#800000] font-bold py-2 hover:bg-[#800000] hover:text-white transition">WATCH NOW</button>
-                </div>
-                <div class="bg-white p-8 shadow-md rounded border-t-4 border-[#800000]">
-                    <i class="fas fa-pen-nib text-4xl text-red-800 mb-4"></i>
-                    <h4 class="font-bold text-xl mb-2">Test Series</h4>
-                    <p class="text-sm text-gray-500 mb-6">Weekly Board pattern mock tests.</p>
-                    <button class="w-full border-2 border-[#800000] text-[#800000] font-bold py-2 hover:bg-[#800000] hover:text-white transition">START TEST</button>
+                <div class="w-full md:w-1/2 p-12 bg-gray-50 border-l border-gray-200 text-center">
+                    <div class="w-24 h-24 bg-slate-200 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-5xl text-slate-800"></i>
+                    </div>
+                    <p class="text-xs font-bold text-red-800 uppercase tracking-widest mb-2">Mentor & Sanchalak</p>
+                    <h3 class="text-4xl font-black text-slate-900 uppercase italic">Abhi Sir</h3>
+                    <p class="mt-4 text-gray-500 text-sm italic">"Hamara lakshya, har chatra ki unnati."</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="bg-[#001a33] text-white py-16 px-4">
-        <div class="container mx-auto grid md:grid-cols-2 gap-12 border-b border-gray-700 pb-10">
-            <div>
-                <h4 class="text-yellow-500 font-bold mb-4 uppercase tracking-widest">Main Campus</h4>
-                <p class="text-2xl font-bold mb-2">A2Z Coaching Center</p>
-                <p class="text-gray-400 text-lg mb-6">Tehsil Road, <span class="text-white underline">SBI Bank Ke Uper</span>,<br>Karera, Shivpuri (M.P.)</p>
-                <p class="text-3xl font-black text-white"><i class="fas fa-phone-square-alt mr-2 text-yellow-500"></i> 9669735935</p>
-            </div>
-            <div class="bg-white/5 p-8 rounded border border-white/10">
-                <h4 class="text-xl font-bold mb-4">Sanchalak (Mentor)</h4>
-                <p class="text-4xl font-serif italic text-yellow-400">Abhi Sir</p>
-                <p class="mt-4 text-gray-400 font-light leading-relaxed">Dedicated to providing quality education in Karera region. Expert in Board Exam preparations and Career Guidance.</p>
-            </div>
-        </div>
-        <p class="text-center mt-10 text-gray-500 text-xs tracking-widest uppercase italic font-bold">© 2025 A2Z COACHING KARERA | PROUDLY DESIGNED BY RITIK</p>
+    <footer class="bg-slate-900 text-slate-500 py-10 text-center border-t border-yellow-500">
+        <p class="text-xs font-bold uppercase tracking-[0.3em]">© 2025 A2Z COACHING KARERA | Built for Abhi Sir by Ritik</p>
     </footer>
 
 </body>
